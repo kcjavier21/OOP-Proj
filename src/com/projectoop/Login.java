@@ -28,7 +28,7 @@ package com.projectoop;
 	 StackPane dashboardLayout;
 
 	 
-	 public void start(Stage primaryStage) {
+	 public void start(Stage primaryStage) throws Exception {
 		 this.window = primaryStage;
 		 this.window.setTitle("Data Science For Everyone - Log in");
 		
@@ -61,7 +61,7 @@ package com.projectoop;
 		
 		if (username.equals(name)) {
 			System.out.println("Welcome, " + username);
-			dashboard.switchScene(username); //-> Will call the switchScene function to switch the scene to dash board window.
+			dashboard.switchScene(); //-> Will call the switchScene function to switch the scene to dash board window.
 		} else {
 			System.out.println("Invalid username, " + username);
 		}	
