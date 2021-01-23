@@ -1,6 +1,5 @@
 package com.projectoop;
 	
-	import java.lang.String;
 	
 	import javafx.application.Application;
 	//import javafx.event.ActionEvent;
@@ -21,6 +20,7 @@ package com.projectoop;
  public class Login extends Application {
 	
 	 public Dashboard dashboard = new Dashboard(); // -> Import Dashboard.java
+	 DisplayController display = new DisplayController();
 	 
 	 public Stage window;
 	 Button button;
@@ -28,6 +28,7 @@ package com.projectoop;
 	 StackPane dashboardLayout;
 
 	 
+	 @Override
 	 public void start(Stage primaryStage) throws Exception {
 		 this.window = primaryStage;
 		 this.window.setTitle("Data Science For Everyone - Log in");
@@ -61,7 +62,10 @@ package com.projectoop;
 		
 		if (username.equals(name)) {
 			System.out.println("Welcome, " + username);
-			dashboard.switchScene(); //-> Will call the switchScene function to switch the scene to dash board window.
+			
+			dashboard.switchScene(username); //-> Will call the switchScene function to switch the scene to dash board window.
+			//this.display.setVal(username);
+			
 		} else {
 			System.out.println("Invalid username, " + username);
 		}	
