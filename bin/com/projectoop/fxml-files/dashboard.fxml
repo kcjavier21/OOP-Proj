@@ -18,7 +18,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="625.0" layoutY="96.0" stroke="TRANSPARENT" strokeType="INSIDE" width="187.0" />
       <Button layoutX="52.0" layoutY="661.0" mnemonicParsing="false" onAction="#buttonIsClicked" text="Refresh Page" />
       <Label fx:id="usernameLabel" layoutX="66.0" layoutY="139.0" prefHeight="32.0" prefWidth="56.0" text="Username" textAlignment="JUSTIFY" />
-      <Button layoutX="61.0" layoutY="229.0" mnemonicParsing="false" style="-fx-background: transparent; -fx-background-color: transparent;" text="Chapter1" />
+      <Button layoutX="61.0" layoutY="229.0" mnemonicParsing="false" onAction="#navigateChapOne" style="-fx-background: transparent; -fx-background-color: transparent;" text="Chapter1" />
       <Button layoutX="62.0" layoutY="281.0" mnemonicParsing="false" style="-fx-background: transparent; -fx-background-color: transparent;" text="Chapter2" />
       <Button layoutX="61.0" layoutY="335.0" mnemonicParsing="false" style="-fx-background: transparent; -fx-background-color: transparent;" text="Chapter3" />
       <Button layoutX="62.0" layoutY="384.0" mnemonicParsing="false" style="-fx-background: transparent; -fx-background-color: transparent;" text="Chapter4" />

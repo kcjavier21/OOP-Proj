@@ -37,7 +37,16 @@ package com.projectoop;
 		TextField username = new TextField();
 		Label LoginLabel = new Label("Please Login");
 		button = new Button("Login");
-		button.setOnAction(e -> isValid(username, username.getText())); //-> Will call the isValid function to check if user name is valid
+		button.setOnAction(e -> {
+			try {
+				isValid(username, username.getText());
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}); //-> Will call the...
+			// isValid function to check if user name is valid
+		
 		
 		// Setting the layout of the Login window
 		VBox loginLayout = new VBox(10);
@@ -50,11 +59,12 @@ package com.projectoop;
 	    this.window.setTitle("Data Science For Everyone");
 	    this.window.show();
 	    
-	    dashboard.start(primaryStage); // -> Calling the start method of Dashboard.java
+	    //dashboard.start(primaryStage); // -> Calling the start method of Dashboard.java
 	}
 
 	// === USERNAME VALIDATION ===
-	public void isValid(TextField input, String message) {
+	public void isValid(TextField input, String message) throws Exception {
+		dashboard.start(this.window);
 		String username = new String(input.getText());
 		String name = new String("Ken");
 		System.out.println("Username: " + username);
@@ -63,9 +73,8 @@ package com.projectoop;
 		if (username.equals(name)) {
 			System.out.println("Welcome, " + username);
 			
-			dashboard.switchScene(username); //-> Will call the switchScene function to switch the scene to dash board window.
-			//this.display.setVal(username);
-			
+			dashboard.switchScene(username); // -> Will call the...
+				// switchScene method to switch the scene to dash board window.
 		} else {
 			System.out.println("Invalid username, " + username);
 		}	

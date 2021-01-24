@@ -36,14 +36,4 @@ public class DisplayController implements Initializable {
 	    return usernameeeStr;
 	  }
 	
-	/*
-	@FXML
-	public void buttonIsClicked() {
-		System.out.println("Nice!");
-		//System.out.println("UN Str Button: " + this.usernameeeStr);
-		this.usernameee.setText(this.getUserNameStr());
-
-		System.out.println("UN Button: " + this.usernameee);
-	}
-	*/
 }
