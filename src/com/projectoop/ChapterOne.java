@@ -133,8 +133,6 @@ public class ChapterOne implements Initializable {
 	private void navigateToQuizOne(InputEvent event) throws Exception {
 		mediaplayer.stop();
 		
-		Platform.exit();
-		
 		try {
     		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projectoop/fxml-files/chapterOneQuiz.fxml"));
 	    	Parent root = (Parent) loader.load();
