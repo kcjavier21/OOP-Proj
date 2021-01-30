@@ -42,7 +42,7 @@ public class Dashboard extends Application {
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		
 		System.out.println("YEEEET " + this.usernameLabel);
-	    Dashboard.dashboardScene = new Scene(dashboardLayout, 1080, 720);
+	    Dashboard.dashboardScene = new Scene(dashboardLayout, 1440, 900);
 	    Dashboard.window.setScene(dashboardScene);
 	    Dashboard.window.show();
 	  }

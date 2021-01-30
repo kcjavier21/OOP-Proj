@@ -1,2 +1,2 @@
-/bin/media
-/src/media
+/bin/media/*.mp4
+/src/media/*.mp4

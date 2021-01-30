@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectoop.ChapterOneQuiz">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bababa21" height="96.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1444.0" />
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="123.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA SCIENCE FOR EVERYONE" AnchorPane.leftAnchor="135.0" AnchorPane.topAnchor="33.9">
+         <font>
+            <Font name="Montserrat-Regular" size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="1223.0" layoutY="39.0" mnemonicParsing="false" onAction="#onClickRefreshButton" text="Refresh Page" AnchorPane.leftAnchor="1279.0" AnchorPane.topAnchor="41.0" />
+      <Label fx:id="usernameLabel" layoutX="1078.0" layoutY="34.0" prefHeight="32.0" prefWidth="84.0" text="Username" textAlignment="JUSTIFY" AnchorPane.leftAnchor="1143.0" AnchorPane.topAnchor="36.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <VBox layoutX="1231.0" layoutY="108.0" prefHeight="127.0" prefWidth="154.0">
+         <children>
+            <Label fx:id="scoreLabel" text="0">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ScrollPane layoutX="440.0" layoutY="209.0" prefHeight="550.0" prefWidth="954.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1606.0" prefWidth="933.0">
+               <children>
+                  <HBox layoutX="10.0" layoutY="32.0" prefHeight="33.0" prefWidth="907.0">
+                     <children>
+                        <TextField fx:id="answer1" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="25.0" prefWidth="823.0" text="1. A set of methodologies for taking in large amounts of data that are used to draw meaningful conclusion.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="105.0" layoutY="85.0" prefHeight="20.0" prefWidth="626.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="581.0" text="a. Data Analytics    b. Data Science    c. Data Analysis   d. Data Engineering">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="18.0" layoutY="175.0" prefHeight="25.0" prefWidth="674.0">
+                     <children>
+                        <TextField fx:id="answer2" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="551.0" text="2. Which of the following does not belong to the group?">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="101.0" layoutY="229.0" prefHeight="25.0" prefWidth="809.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="794.0" text="a. Data Collection &amp; Storage    b. Exploration &amp; Visualization    c. Data Filter &amp; Sorting    d. None of these">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="17.0" layoutY="319.0" prefHeight="25.0" prefWidth="894.0">
+                     <children>
+                        <TextField fx:id="answer3" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="793.0" text="3. Involves building dashboards to track how data changes overtime.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="100.0" layoutY="375.0" prefHeight="25.0" prefWidth="798.0" text="a. Data Preparation   b. Experimentation &amp; Prediction    c. Data Collection     d. Exploration &amp; Visualization">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="13.0" layoutY="458.0" prefHeight="15.0" prefWidth="511.0">
+                     <children>
+                        <TextField fx:id="answer4" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="4. Used to build and algorithm.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="100.0" layoutY="508.0" prefHeight="20.0" prefWidth="497.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="489.0" text="a. Database   b. Records    c. Training Data    d. Dashboard">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="22.0" layoutY="606.0" prefHeight="25.0" prefWidth="622.0">
+                     <children>
+                        <TextField fx:id="answer5" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="501.0" text="5. Which of the following is needed for machine learning?">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="100.0" layoutY="653.0" prefHeight="25.0" prefWidth="700.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="669.0" text="a. A new set of data   b. A well-defined question    c. All of these   d. None of these">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="22.0" layoutY="726.0" prefHeight="25.0" prefWidth="775.0">
+                     <children>
+                        <TextField fx:id="answer6" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="625.0" text="6. Refers to gadgets that aren’t standard computers.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="100.0" layoutY="773.0" prefHeight="25.0" prefWidth="700.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="692.0" text="a. Deep Learning   b. Traditional Machine Learning    c. PS2 Console    d. Internet of Things (IoT)">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="24.0" layoutY="853.0" prefHeight="25.0" prefWidth="784.0">
+                     <children>
+                        <TextField fx:id="answer7" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="396.0" text="7. Which is true about Deep Learning?">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="103.0" layoutY="899.0" prefHeight="20.0" prefWidth="806.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="803.0" text="a. Requires much more training data    b. Used in simple problems    c. Fewer neurons needed    d. None of these">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="27.0" layoutY="964.0" prefHeight="25.0" prefWidth="784.0">
+                     <children>
+                        <TextField fx:id="answer8" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="643.0" text="8. Which of the following statements is true about a Data Engineer?">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="104.0" layoutY="1019.0" prefHeight="25.0" prefWidth="815.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="813.0" text="a. Creates visualizations and dashboards     b. They build custom data pipelines    c. All of these    ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="27.0" layoutY="1100.0" prefHeight="25.0" prefWidth="863.0">
+                     <children>
+                        <TextField fx:id="answer9" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="20.0" prefWidth="770.0" text="9. Uses training data to classify larger and unrulier data.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="109.0" layoutY="1142.0" prefHeight="20.0" prefWidth="708.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="686.0" text="a. Data Analyst    b. Data Scientist    c. Machine Learning Scientist    d. Data Stewards">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="33.0" layoutY="1221.0" prefHeight="15.0" prefWidth="511.0">
+                     <children>
+                        <TextField fx:id="answer10" prefHeight="0.0" prefWidth="66.0">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="10. Data Scientist's tool.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="114.0" layoutY="1260.0" prefHeight="20.0" prefWidth="497.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="489.0" text="a. Java    b. Figma    c. GitHub    d. SQL Database">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="35.0" layoutY="1317.0" prefHeight="15.0" prefWidth="511.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="Submit" layoutX="1250.0" layoutY="787.0" mnemonicParsing="false" onAction="#submitAnswers" prefWidth="120.0" style="-fx-background-color: #14AA11;" text="Submit" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="1087.0" layoutY="125.0" prefHeight="20.0" prefWidth="111.0" text="YOUR SCORE:" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="55.0" layoutY="143.0" prefHeight="361.0" prefWidth="338.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="216.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 1">
+               <font>
+                  <Font name="Montserrat-Regular" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
+               <font>
+                  <Font name="Montserrat-Regular" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 3">
+               <font>
+                  <Font name="Montserrat-Regular" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
+               <font>
+                  <Font name="Montserrat-Regular" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" height="130.0" layoutX="62.0" layoutY="610.0" stroke="TRANSPARENT" strokeType="INSIDE" width="338.0" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="632.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.41428571428571426">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8901960849761963" green="0.26274511218070984" blue="0.4901960790157318" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3843137323856354" blue="0.1882352977991104" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="121.0" layoutY="650.0" prefWidth="116.0" text="Progress:" textFill="WHITE" AnchorPane.leftAnchor="106.0" AnchorPane.topAnchor="663.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="701.0" prefWidth="116.0" text="Total Score:" textFill="WHITE" AnchorPane.leftAnchor="106.0" AnchorPane.topAnchor="702.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

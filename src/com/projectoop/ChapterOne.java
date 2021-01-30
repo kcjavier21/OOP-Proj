@@ -1,20 +1,31 @@
 package com.projectoop;
 
+import javafx.application.Platform;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.input.InputEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
@@ -37,7 +48,13 @@ public class ChapterOne implements Initializable {
 	private Button btn_stop;
 	
 	@FXML
+	private Button btn_take_quiz;
+	
+	@FXML
 	private Slider progressBar;
+	
+	@FXML
+	private Slider volumeSlider;
 	
 	MediaPlayer mediaplayer;
 	
@@ -76,6 +93,17 @@ public class ChapterOne implements Initializable {
 				mediaplayer.seek(Duration.seconds(progressBar.getValue()));
 			}
 		});
+		
+		volumeSlider.setValue(mediaplayer.getVolume() * 100);
+		
+		volumeSlider.valueProperty().addListener(new InvalidationListener() {
+			@Override
+			public void invalidated(Observable observable) {
+				mediaplayer.setVolume(volumeSlider.getValue()/100);
+			}
+		});
+		
+		
 	}
 	
 	@FXML
@@ -98,4 +126,25 @@ public class ChapterOne implements Initializable {
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		System.out.println("UN Button: " + this.usernameLabel);
 	}
+	
+	
+	
+	@FXML 
+	private void navigateToQuizOne(InputEvent event) throws Exception {
+		mediaplayer.stop();
+		
+		Platform.exit();
+		
+		try {
+    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projectoop/fxml-files/chapterOneQuiz.fxml"));
+	    	Parent root = (Parent) loader.load();
+	    	Stage stage = new Stage();
+	    	stage.setScene(new Scene(root));
+	    	stage.show();
+    	} catch (IOException e) {
+    		e.printStackTrace();
+    	}
+		
+	}
+	
 }
