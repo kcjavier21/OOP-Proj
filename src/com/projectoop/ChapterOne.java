@@ -131,7 +131,7 @@ public class ChapterOne implements Initializable {
 	
 	@FXML 
 	private void navigateToQuizOne(InputEvent event) throws Exception {
-		mediaplayer.stop();
+		//mediaplayer.stop();
 		
 		try {
     		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projectoop/fxml-files/chapterOneQuiz.fxml"));
