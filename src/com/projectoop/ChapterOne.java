@@ -45,6 +45,7 @@ public class ChapterOne implements Initializable {
 	@FXML private Button btn_take_quiz;
 	
 	@FXML private Button btnDashboard;
+	@FXML private Button btnLogOut;
 	
 	@FXML private Slider progressBar;
 	
@@ -62,7 +63,7 @@ public class ChapterOne implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		String VUrl = new File("src/media/test.mp4").getAbsolutePath();
+		String VUrl = new File("src/media/ChapterOne.mp4").getAbsolutePath();
 		Media media = new Media(new File(VUrl).toURI().toString());
 		mediaplayer = new MediaPlayer(media);
 		
@@ -137,6 +138,24 @@ public class ChapterOne implements Initializable {
 	
 	
 	
+	// ============= NAVIGATION ===============
+	
+	public void logOut() throws Exception {
+		mediaplayer.stop();
+		
+	    Stage currentStage = (Stage) btnLogOut.getScene().getWindow();
+	    currentStage.close();
+	    
+		try {
+	    	Stage stage = new Stage();
+	    	LoginPageGUI loginPageGUI = new LoginPageGUI();
+	    	loginPageGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
 	@FXML 
 	private void navigateToQuizOne() throws Exception {
 		mediaplayer.stop();

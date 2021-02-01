@@ -25,7 +25,7 @@ public class DisplayController implements Initializable {
 	
 	private static int userTotalScore = 0;
 	
-	private static int userQuiz1Attempts = 0;
+	private static int userQuiz1Attempts = 3;
 	
 	private static String usernameeeStr;
 	

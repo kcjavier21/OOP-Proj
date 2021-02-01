@@ -17,6 +17,7 @@ public class ChapterOneQuiz {
 	@FXML private TextField answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10;
 	
 	@FXML private Button Submit;
+	@FXML private Button btnLogOut;
 	@FXML private Button btnGoBack;
 	@FXML private Button btnChapOne;
 	@FXML private Button btnDashboard;
@@ -48,6 +49,12 @@ public class ChapterOneQuiz {
 		
 		ChapterOneQuiz.userTotalScore = DisplayController.getUserTotalScore();
 		this.userTotalScoreLabel.setText(Integer.toString(ChapterOneQuiz.userTotalScore));
+		
+		if (ChapterOneQuiz.attempts <= 0) {
+			ChapterOneQuiz.attempts = 0;
+			
+			this.Submit.setDisable(true);
+		}
 		
 		ChapterOneQuiz.attempts = DisplayController.getQuiz1Attempts();
 		this.attemptLabel.setText(Integer.toString(ChapterOneQuiz.attempts));
@@ -134,6 +141,22 @@ public class ChapterOneQuiz {
 	
 	
 	// ========== NAVIGATE ===========
+	
+	public void logOut() throws Exception {
+		
+	    Stage currentStage = (Stage) btnLogOut.getScene().getWindow();
+	    currentStage.close();
+	    
+		try {
+	    	Stage stage = new Stage();
+	    	LoginPageGUI loginPageGUI = new LoginPageGUI();
+	    	loginPageGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
 	@FXML 
 	private void goBack() throws Exception {
 		
@@ -169,6 +192,8 @@ public class ChapterOneQuiz {
 	    dashboard.start(window);
 		dashboard.switchScene(ChapterOneQuiz.username);
 	}
+	
+	
 		
 	
 	

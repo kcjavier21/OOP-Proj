@@ -18,7 +18,7 @@ public class Main extends Application {
 	
 	Stage window;
 	 
-	public Login login = new Login();
+	public LoginPageGUI loginPageGUI = new LoginPageGUI();
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -26,7 +26,9 @@ public class Main extends Application {
 	
 	@Override
 		public void start(Stage primaryStage) throws Exception {
-			login.start(primaryStage);
+			//login.start(primaryStage);
+			Stage stage = new Stage();
+			loginPageGUI.start(stage);
 		}
 
 }

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -17,6 +18,8 @@ public class Dashboard extends Application {
 	@FXML private Label usernameLabel = new Label("Hello");
 	@FXML private Label userProgressLabel = new Label("0");
 	@FXML private Label userTotalScoreLabel = new Label("0");
+	
+	@FXML private Button btnLogOut;
 	
 	private static int userProgress = 0;
 	private static int userTotalScore = 0;
@@ -28,6 +31,8 @@ public class Dashboard extends Application {
 	private static Stage window;
 	DisplayController display = new DisplayController();
 	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
+	
+	
 	
 	
 	
@@ -67,6 +72,23 @@ public class Dashboard extends Application {
 		this.userTotalScoreLabel.setText(Integer.toString(Dashboard.userTotalScore));
 	}
 	
+	
+	
+	public void logOut() throws Exception {
+		
+	    Stage currentStage = (Stage) btnLogOut.getScene().getWindow();
+	    currentStage.close();
+	    
+		try {
+	    	Stage stage = new Stage();
+	    	LoginPageGUI loginPageGUI = new LoginPageGUI();
+	    	loginPageGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
 	public void navigateToChapOne() throws Exception {
 			Dashboard.window.close();
 			
