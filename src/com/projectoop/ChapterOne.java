@@ -1,20 +1,17 @@
 package com.projectoop;
 
-import javafx.application.Platform;
+
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.scene.input.InputEvent;
+
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -34,29 +31,34 @@ import javafx.fxml.Initializable;
 public class ChapterOne implements Initializable {
 
 	@FXML private Label usernameLabel = new Label("Hello");
+	@FXML private Label userProgressLabel = new Label("0");
+	@FXML private Label userTotalScoreLabel = new Label("0");
 	
-	@FXML 
-	private MediaView mv;
+	@FXML private MediaView mv;
 	
-	@FXML
-	private Button btn_play;
+	@FXML private Button btn_play;
 	
-	@FXML
-	private Button btn_pause;
+	@FXML private Button btn_pause;
 	
-	@FXML
-	private Button btn_stop;
+	@FXML private Button btn_stop;
 	
-	@FXML
-	private Button btn_take_quiz;
+	@FXML private Button btn_take_quiz;
 	
-	@FXML
-	private Slider progressBar;
+	@FXML private Button btnDashboard;
 	
-	@FXML
-	private Slider volumeSlider;
+	@FXML private Slider progressBar;
+	
+	@FXML private Slider volumeSlider;
 	
 	MediaPlayer mediaplayer;
+	
+	ChapterOneQuizGUI chapterOneQuizGUI = new ChapterOneQuizGUI();
+	ChapterOneQuiz chapterOneQuiz = new ChapterOneQuiz();
+	Dashboard dashboard = new Dashboard();
+	
+	private static int userProgress = 0;
+	private static int userTotalScore = 0;
+	private static String username = new String("Username");
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
@@ -64,8 +66,8 @@ public class ChapterOne implements Initializable {
 		Media media = new Media(new File(VUrl).toURI().toString());
 		mediaplayer = new MediaPlayer(media);
 		
-		mv.setFitHeight(480);
-		mv.setFitWidth(720);
+		mv.setFitHeight(540);
+		mv.setFitWidth(810);
 		mv.setMediaPlayer(mediaplayer);
 		
 		mediaplayer.setAutoPlay(true);
@@ -101,9 +103,7 @@ public class ChapterOne implements Initializable {
 			public void invalidated(Observable observable) {
 				mediaplayer.setVolume(volumeSlider.getValue()/100);
 			}
-		});
-		
-		
+		});	
 	}
 	
 	@FXML
@@ -123,26 +123,43 @@ public class ChapterOne implements Initializable {
 
 	public void onClickRefreshButton() {
 		System.out.println("Refresh button clicked!");
+		ChapterOne.username = DisplayController.getUserNameStr();
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		System.out.println("UN Button: " + this.usernameLabel);
+		
+		ChapterOne.userProgress = DisplayController.getUserProgress();
+		this.userProgressLabel.setText(Integer.toString(ChapterOne.userProgress));
+		
+		ChapterOne.userTotalScore = DisplayController.getUserTotalScore();
+		this.userTotalScoreLabel.setText(Integer.toString(ChapterOne.userTotalScore));
+		
 	}
 	
 	
 	
 	@FXML 
-	private void navigateToQuizOne(InputEvent event) throws Exception {
-		//mediaplayer.stop();
+	private void navigateToQuizOne() throws Exception {
+		mediaplayer.stop();
+		
+	    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
+	    currentStage.close();
 		
 		try {
-    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projectoop/fxml-files/chapterOneQuiz.fxml"));
-	    	Parent root = (Parent) loader.load();
 	    	Stage stage = new Stage();
-	    	stage.setScene(new Scene(root));
-	    	stage.show();
+	    	chapterOneQuizGUI.start(stage);
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
-		
 	}
 	
+	
+	public void navigateToDashboard() throws Exception {
+		mediaplayer.stop();
+		
+	    Stage currentStage = (Stage) btnDashboard.getScene().getWindow();
+	    currentStage.close();
+	    Stage window = new Stage();
+	    dashboard.start(window);
+		dashboard.switchScene(ChapterOne.username);
+	}
 }

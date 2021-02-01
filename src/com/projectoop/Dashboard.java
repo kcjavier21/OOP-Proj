@@ -15,6 +15,11 @@ import javafx.stage.Stage;
 public class Dashboard extends Application {
 	
 	@FXML private Label usernameLabel = new Label("Hello");
+	@FXML private Label userProgressLabel = new Label("0");
+	@FXML private Label userTotalScoreLabel = new Label("0");
+	
+	private static int userProgress = 0;
+	private static int userTotalScore = 0;
 	
 	public static ChapterOne chapterOne = new ChapterOne();
 	
@@ -22,6 +27,8 @@ public class Dashboard extends Application {
 	private static Scene dashboardScene;
 	private static Stage window;
 	DisplayController display = new DisplayController();
+	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
+	
 	
 	
 	public Label getUsernameLabel() {
@@ -47,24 +54,28 @@ public class Dashboard extends Application {
 	    Dashboard.window.show();
 	  }
 	
+	
 	public void buttonIsClicked() {
 		System.out.println("Refresh button clicked!");
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		System.out.println("UN Button: " + this.usernameLabel);
+		
+		Dashboard.userProgress = DisplayController.getUserProgress();
+		this.userProgressLabel.setText(Integer.toString(Dashboard.userProgress));
+		
+		Dashboard.userTotalScore = DisplayController.getUserTotalScore();
+		this.userTotalScoreLabel.setText(Integer.toString(Dashboard.userTotalScore));
 	}
 	
-	public void navigateChapOne() throws Exception {
+	public void navigateToChapOne() throws Exception {
 			Dashboard.window.close();
+			
 		try {
-    		FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projectoop/fxml-files/chapterOne.fxml"));
-	    	Parent root = (Parent) loader.load();
 	    	Stage stage = new Stage();
-	    	stage.setScene(new Scene(root));
-	    	stage.show();
+	    	chapterOneGUI.start(stage);
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
-
 	}
 }
 
