@@ -21,6 +21,7 @@ public class ChapterTwoGUI {
 	    ChapterTwoGUI.window.show();
 		
 		System.out.println("Chapter One"); 
+		primaryStage.setResizable(false);
 	}
 
 }

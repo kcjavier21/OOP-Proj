@@ -61,7 +61,7 @@
             <Font name="Montserrat-Regular" size="40.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="440.0" layoutY="241.0" prefHeight="514.0" prefWidth="954.0">
+      <ScrollPane layoutX="440.0" layoutY="241.0" prefHeight="515.0" prefWidth="954.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1570.0" prefWidth="933.0">
                <children>
@@ -72,7 +72,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="25.0" prefWidth="823.0" text="1. A set of methodologies for taking in large amounts of data that are used to draw meaningful conclusion.">
+                        <Label prefHeight="25.0" prefWidth="823.0" text="1. Sources of company data.">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -81,7 +81,7 @@
                   </HBox>
                   <HBox layoutX="105.0" layoutY="85.0" prefHeight="20.0" prefWidth="626.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="581.0" text="a. Data Analytics    b. Data Science    c. Data Analysis   d. Data Engineering">
+                        <Label prefHeight="25.0" prefWidth="581.0" text="a. Financial Transactions    b. Data APIs    c. Internet Data   d. JSON">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -95,7 +95,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="551.0" text="2. Which of the following does not belong to the group?">
+                        <Label prefHeight="20.0" prefWidth="551.0" text="2. Public records are collected and shared by what organization?">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -104,7 +104,7 @@
                   </HBox>
                   <HBox layoutX="101.0" layoutY="229.0" prefHeight="25.0" prefWidth="809.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="794.0" text="a. Data Collection &amp; Storage    b. Exploration &amp; Visualization    c. Data Filter &amp; Sorting    d. None of these">
+                        <Label prefHeight="25.0" prefWidth="794.0" text="a. Non- Government Organizations    b. National Statistic Offices    c. All of these    d. None of these">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -118,14 +118,14 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="793.0" text="3. Involves building dashboards to track how data changes overtime.">
+                        <Label prefHeight="20.0" prefWidth="793.0" text="3. Type of data that can be counted, measured, and expressed using numbers.">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <Label layoutX="100.0" layoutY="375.0" prefHeight="25.0" prefWidth="798.0" text="a. Data Preparation   b. Experimentation &amp; Prediction    c. Data Collection     d. Exploration &amp; Visualization">
+                  <Label layoutX="100.0" layoutY="375.0" prefHeight="25.0" prefWidth="798.0" text="a. Qualitative Data   b. Numerical Data   c. Quantitative Data    d. None of these">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -137,16 +137,16 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label text="4. Used to build and algorithm.">
+                        <Label text="4. What is an example of qualitative data?">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="100.0" layoutY="508.0" prefHeight="20.0" prefWidth="497.0">
+                  <HBox layoutX="100.0" layoutY="508.0" prefHeight="25.0" prefWidth="598.0">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="489.0" text="a. Database   b. Records    c. Training Data    d. Dashboard">
+                        <Label prefHeight="25.0" prefWidth="578.0" text="a. The sky is blue   b. PS5 costs $499   c. PS5 costs $499    d. A dozen of eggs">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -160,7 +160,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="501.0" text="5. Which of the following is needed for machine learning?">
+                        <Label prefHeight="20.0" prefWidth="501.0" text="5. Other Data Type examples.">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -169,7 +169,7 @@
                   </HBox>
                   <HBox layoutX="100.0" layoutY="653.0" prefHeight="25.0" prefWidth="700.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="669.0" text="a. A new set of data   b. A well-defined question    c. All of these   d. None of these">
+                        <Label prefHeight="25.0" prefWidth="669.0" text="a. Geospatial Data   b. Image Data    c. All of these   d. None of these">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -183,7 +183,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="625.0" text="6. Refers to gadgets that aren’t standard computers.">
+                        <Label prefHeight="20.0" prefWidth="625.0" text="6. Things to consider when storing data">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -192,7 +192,7 @@
                   </HBox>
                   <HBox layoutX="100.0" layoutY="773.0" prefHeight="25.0" prefWidth="700.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="692.0" text="a. Deep Learning   b. Traditional Machine Learning    c. PS2 Console    d. Internet of Things (IoT)">
+                        <Label prefHeight="25.0" prefWidth="692.0" text="a. Size of Data   b. Size of Data    c. All of these    d. None of these">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -206,7 +206,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="396.0" text="7. Which is true about Deep Learning?">
+                        <Label prefHeight="25.0" prefWidth="430.0" text="7. A subscription based storage that stores data for you.">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -215,7 +215,7 @@
                   </HBox>
                   <HBox layoutX="103.0" layoutY="899.0" prefHeight="20.0" prefWidth="806.0">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="803.0" text="a. Requires much more training data    b. Used in simple problems    c. Fewer neurons needed    d. None of these">
+                        <Label prefHeight="20.0" prefWidth="803.0" text="a. Cloud Storage    b. Server on premises    c. Google Drive   d. None of these">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -229,7 +229,7 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="643.0" text="8. Which of the following statements is true about a Data Engineer?">
+                        <Label prefHeight="20.0" prefWidth="643.0" text="8. Moves data into the defined stages.">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -238,7 +238,7 @@
                   </HBox>
                   <HBox layoutX="104.0" layoutY="1019.0" prefHeight="25.0" prefWidth="815.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="813.0" text="a. Creates visualizations and dashboards     b. They build custom data pipelines    c. All of these    ">
+                        <Label prefHeight="25.0" prefWidth="813.0" text="a. Tabular Data     b. Databases   c. Data Pipeline    d. Rest API   ">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -252,39 +252,39 @@
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label prefHeight="20.0" prefWidth="770.0" text="9. Uses training data to classify larger and unrulier data.">
+                        <Label prefHeight="20.0" prefWidth="770.0" text="9. Which of the following statement is true about Data pipeline?">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="109.0" layoutY="1142.0" prefHeight="20.0" prefWidth="708.0">
+                  <HBox layoutX="109.0" layoutY="1142.0" prefHeight="25.0" prefWidth="796.0">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="686.0" text="a. Data Analyst    b. Data Scientist    c. Machine Learning Scientist    d. Data Stewards">
+                        <Label prefHeight="25.0" prefWidth="798.0" text="a. Monitored without general alerts     b. Used to customize solutions  c. Necessary for big data projects">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="27.0" layoutY="1221.0" prefHeight="15.0" prefWidth="511.0">
+                  <HBox layoutX="27.0" layoutY="1221.0" prefHeight="25.0" prefWidth="817.0">
                      <children>
                         <TextField fx:id="answer10" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
-                        <Label text="10. Data Scientist's tool.">
+                        <Label prefHeight="25.0" prefWidth="711.0" text="10. Which of the following statements are true about data transformation?">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="114.0" layoutY="1260.0" prefHeight="20.0" prefWidth="497.0">
+                  <HBox layoutX="114.0" layoutY="1260.0" prefHeight="25.0" prefWidth="777.0">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="489.0" text="a. Java    b. Figma    c. GitHub    d. SQL Database">
+                        <Label prefHeight="25.0" prefWidth="779.0" text="a. Separating data sources    b. Removing irrevelevant data    c. All of these    d. None of these">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -313,27 +313,39 @@
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
+            <Button fx:id="btnChaptwo" mnemonicParsing="false" onAction="#navigateToChapTwo" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 3">
+            <Button fx:id="btnChapThree" mnemonicParsing="false" onAction="#navigateToChapThree" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 3">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </VBox>
@@ -394,11 +406,17 @@
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnLogOut" layoutX="83.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: transparent;" text="Logout">
                <font>
                   <Font size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </HBox>
@@ -421,6 +439,9 @@
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnDashboard" layoutX="56.0" layoutY="25.0" mnemonicParsing="false" onAction="#navigateToDashboard" prefHeight="53.0" prefWidth="535.0" style="-fx-background-color: transparent;" />
    </children>

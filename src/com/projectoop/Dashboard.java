@@ -33,9 +33,6 @@ public class Dashboard extends Application {
 	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
 	
 	
-	
-	
-	
 	public Label getUsernameLabel() {
         return this.usernameLabel;
     }
@@ -46,6 +43,7 @@ public class Dashboard extends Application {
 		 Dashboard.window.setTitle("Data Science For Everyone - Dashboard");
 		 
 		 System.out.println("Welcome " + usernameLabel); 
+		 primaryStage.setResizable(false);
 	}
 	
 	public void switchScene(String username) throws Exception {
@@ -73,6 +71,10 @@ public class Dashboard extends Application {
 	}
 	
 	
+	
+	
+	
+	// ======= NAVIGATION ========
 	
 	public void logOut() throws Exception {
 		
@@ -103,13 +105,38 @@ public class Dashboard extends Application {
 	public void navigateToChapTwo() throws Exception {
 		Dashboard.window.close();
 		
-	try {
-    	Stage stage = new Stage();
-    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
-    	chapterTwoGUI.start(stage);
-	} catch (IOException e) {
-		e.printStackTrace();
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
+	    	chapterTwoGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-}
+	
+	
+	public void navigateToChapThree() throws Exception {
+		Dashboard.window.close();
+		
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
+	    	chapterThreeGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void navigateToChapFour() throws Exception {
+		Dashboard.window.close();
+		
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterFourGUI chapterFourGUI = new ChapterFourGUI();
+	    	chapterFourGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
 

@@ -20,6 +20,8 @@ public class ChapterTwoQuiz {
 	@FXML private Button btnLogOut;
 	@FXML private Button btnGoBack;
 	@FXML private Button btnChapOne;
+	@FXML private Button btnChapTwo;
+	@FXML private Button btnChapThree;
 	@FXML private Button btnDashboard;
 	
 	private static int attempts = 3;
@@ -72,34 +74,34 @@ public class ChapterTwoQuiz {
 		ChapterTwoQuiz.attempts -= 1;
 		
 		// ===== Identifying number of Attempts =====
-		if (ChapterTwoQuiz.attempts <= 0) {
+		if (ChapterTwoQuiz.attempts < 0) {
 			ChapterTwoQuiz.attempts = 0;
 			
 			this.Submit.setDisable(true);
 		}
 		else {
-				if (answer1.getText().toLowerCase().equals("b")) 
+				if (answer1.getText().toLowerCase().equals("a")) 
 					tempScore = tempScore + 1;
 				
 				if (answer2.getText().toLowerCase().equals("a")) 
 					tempScore = tempScore + 1;
 				
-				if (answer3.getText().toLowerCase().equals("d")) 
+				if (answer3.getText().toLowerCase().equals("c")) 
 					tempScore = tempScore + 1;
 					
-				if (answer4.getText().toLowerCase().equals("c")) 
+				if (answer4.getText().toLowerCase().equals("a")) 
 					tempScore = tempScore + 1;
 				
 				if (answer5.getText().toLowerCase().equals("c")) 
 					tempScore = tempScore + 1;
 				
-				if (answer6.getText().toLowerCase().equals("d")) 
+				if (answer6.getText().toLowerCase().equals("b")) 
 					tempScore = tempScore + 1;
 				
 				if (answer7.getText().toLowerCase().equals("a")) 
 					tempScore = tempScore + 1;
 				
-				if (answer8.getText().toLowerCase().equals("b")) 
+				if (answer8.getText().toLowerCase().equals("c")) 
 					tempScore = tempScore + 1;
 				
 				if (answer9.getText().toLowerCase().equals("c")) 
@@ -117,6 +119,11 @@ public class ChapterTwoQuiz {
 					
 				}	
 				
+				if (ChapterTwoQuiz.attempts <= 0) {
+					ChapterTwoQuiz.attempts = 0;
+					
+					this.Submit.setDisable(true);
+				}
 				
 				
 				ChapterTwoQuiz.score = tempScore;
@@ -184,6 +191,36 @@ public class ChapterTwoQuiz {
 			e.printStackTrace();
 		}
 	}
+	
+	public void navigateToChapTwo() throws Exception {
+		
+	    Stage currentStage = (Stage) btnChapTwo.getScene().getWindow();
+	    currentStage.close();
+	    
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
+	    	chapterTwoGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	public void navigateToChapThree() throws Exception {
+			
+			Stage currentStage = (Stage) btnChapThree.getScene().getWindow();
+		    currentStage.close();
+			
+			try {
+		    	Stage stage = new Stage();
+		    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
+		    	chapterThreeGUI.start(stage);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	
 
 	
 	public void navigateToDashboard() throws Exception {

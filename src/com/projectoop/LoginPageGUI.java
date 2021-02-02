@@ -21,7 +21,9 @@ public class LoginPageGUI extends Application {
 	    LoginPageGUI.window.setScene(loginPageScene);
 	    LoginPageGUI.window.show();
 		
-		System.out.println("Login Page"); 
+		System.out.println("Login Page");
+		
+		primaryStage.setResizable(false);
 	}
 
 }

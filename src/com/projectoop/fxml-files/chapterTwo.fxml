@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Slider?>
@@ -52,16 +53,25 @@
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btn_pause" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" onAction="#on_click_btn_pause" prefHeight="43.0" prefWidth="91.0" text="Pause">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btn_stop" mnemonicParsing="false" onAction="#on_click_btn_stop" prefHeight="43.0" prefWidth="91.0" text="Stop">
                <HBox.margin>
                   <Insets right="10.0" />
-               </HBox.margin></Button>
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label text="Volume">
                <HBox.margin>
                   <Insets left="50.0" right="20.0" top="5.0" />
@@ -70,17 +80,26 @@
             <Slider fx:id="volumeSlider" prefWidth="139.0">
                <HBox.margin>
                   <Insets top="6.0" />
-               </HBox.margin></Slider>
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
          </children>
          <padding>
             <Insets left="10.0" right="10.0" />
          </padding>
       </HBox>
-      <Slider fx:id="progressBar" layoutX="496.0" layoutY="700.0" prefHeight="14.0" prefWidth="765.0" />
+      <Slider fx:id="progressBar" layoutX="496.0" layoutY="700.0" prefHeight="14.0" prefWidth="765.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Slider>
       <Button fx:id="btn_take_quiz" layoutX="1168.0" layoutY="798.0" mnemonicParsing="false" onAction="#navigateToQuizTwo" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: transparent;" text="Take Quiz &gt;">
          <font>
             <Font size="20.0" />
-         </font></Button>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <VBox layoutX="98.0" layoutY="135.0" prefHeight="352.0" prefWidth="338.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="216.0">
          <children>
             <Button fx:id="btnChapOne" mnemonicParsing="false" onAction="#navigateToChapOne" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 1">
@@ -90,6 +109,9 @@
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
                <font>
@@ -98,19 +120,28 @@
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 3">
+            <Button fx:id="btnChapThree" mnemonicParsing="false" onAction="#navigateToChapThree" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 3">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
+            <Button fx:id="btnChapFour" mnemonicParsing="false" onAction="#navigateToChapFour" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </VBox>
@@ -176,11 +207,17 @@
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnLogOut" layoutX="83.0" layoutY="10.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: transparent;" text="Logout">
                <font>
                   <Font size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </HBox>
@@ -189,7 +226,13 @@
             <Font name="Montserrat-Regular" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnDashboard" layoutX="56.0" layoutY="24.0" mnemonicParsing="false" onAction="#navigateToDashboard" prefHeight="53.0" prefWidth="532.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="btnSeePDF" layoutX="837.0" layoutY="808.0" mnemonicParsing="false" onAction="#seePDF" prefHeight="25.0" prefWidth="101.0" text="See PDF here!" />
+      <Button fx:id="btnDashboard" layoutX="56.0" layoutY="24.0" mnemonicParsing="false" onAction="#navigateToDashboard" prefHeight="53.0" prefWidth="532.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSeePDF" layoutX="837.0" layoutY="808.0" mnemonicParsing="false" onAction="#seePDF" prefHeight="25.0" prefWidth="101.0" text="See PDF here!">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>

@@ -22,5 +22,6 @@ public class ChapterOneGUI extends Application {
 	    ChapterOneGUI.window.show();
 		
 		System.out.println("Chapter One"); 
+		primaryStage.setResizable(false);
 	}
 }

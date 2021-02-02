@@ -21,6 +21,7 @@ public class ChapterOneQuiz {
 	@FXML private Button btnGoBack;
 	@FXML private Button btnChapOne;
 	@FXML private Button btnChapTwo;
+	@FXML private Button btnChapThree;
 	@FXML private Button btnDashboard;
 	
 	private static int attempts = 3;
@@ -73,7 +74,7 @@ public class ChapterOneQuiz {
 		ChapterOneQuiz.attempts -= 1;
 		
 		// ===== Identifying number of Attempts =====
-		if (ChapterOneQuiz.attempts <= 0) {
+		if (ChapterOneQuiz.attempts < 0) {
 			ChapterOneQuiz.attempts = 0;
 			
 			this.Submit.setDisable(true);
@@ -117,6 +118,12 @@ public class ChapterOneQuiz {
 					ChapterOneQuiz.userProgress += 25;
 					
 				}	
+				
+				if (ChapterOneQuiz.attempts <= 0) {
+					ChapterOneQuiz.attempts = 0;
+					
+					this.Submit.setDisable(true);
+				}
 				
 				
 				
@@ -209,6 +216,19 @@ public class ChapterOneQuiz {
 		}
 	}
 	
+	public void navigateToChapThree() throws Exception {
+		
+		Stage currentStage = (Stage) btnChapThree.getScene().getWindow();
+	    currentStage.close();
+		
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
+	    	chapterThreeGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 		
 	

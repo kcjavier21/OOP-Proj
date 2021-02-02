@@ -27,8 +27,8 @@ public class DisplayController implements Initializable {
 	
 	private static int userQuiz1Attempts = 3;
 	private static int userQuiz2Attempts = 3;
-	//private static int userQuiz3Attempts = 3;
-	//private static int userQuiz4Attempts = 3;
+	private static int userQuiz3Attempts = 3;
+	private static int userQuiz4Attempts = 3;
 	
 	private static String usernameeeStr;
 	
@@ -71,7 +71,7 @@ public class DisplayController implements Initializable {
 	
 	
 	
-	// ===== USER's SCORE ======
+	// ===== USER's TOTAL SCORE ======
 	
 	public static void setUserTotalScore() {
 		DisplayController.userTotalScore = DisplayController.userQuiz1Score + 
@@ -138,6 +138,60 @@ public class DisplayController implements Initializable {
 			System.out.println(DisplayController.userTotalScore);
 			DisplayController.setUserTotalScore();
 		}
+		
+		
+	// ===== USER's QUIZ 3 ATTRIBUTES =======
+			@FXML
+			public static Integer getQuiz3Attempts() {
+			    return DisplayController.userQuiz3Attempts;
+			 }
+			
+			public static void setQuiz3Attempts(Integer attempts) {
+				System.out.println(DisplayController.userQuiz3Attempts);
+				DisplayController.userQuiz3Attempts = attempts;
+				System.out.println(DisplayController.userQuiz3Attempts);
+			}
+			
+			
+			@FXML
+			public static Integer getQuiz3Score() {
+			    return DisplayController.userQuiz3Score;
+			 }
+			
+			public static void setQuiz3Score(Integer score) {
+				System.out.println(DisplayController.userQuiz3Score);
+				DisplayController.userQuiz3Score = score;
+				System.out.println(DisplayController.userQuiz3Score);
+				System.out.println(DisplayController.userTotalScore);
+				DisplayController.setUserTotalScore();
+			}
+			
+
+		// ===== USER's QUIZ 3 ATTRIBUTES =======
+			@FXML
+			public static Integer getQuiz4Attempts() {
+			    return DisplayController.userQuiz4Attempts;
+			 }
+			
+			public static void setQuiz4Attempts(Integer attempts) {
+				System.out.println(DisplayController.userQuiz4Attempts);
+				DisplayController.userQuiz4Attempts = attempts;
+				System.out.println(DisplayController.userQuiz4Attempts);
+			}
+			
+			
+			@FXML
+			public static Integer getQuiz4Score() {
+			    return DisplayController.userQuiz4Score;
+			 }
+			
+			public static void setQuiz4Score(Integer score) {
+				System.out.println(DisplayController.userQuiz4Score);
+				DisplayController.userQuiz4Score = score;
+				System.out.println(DisplayController.userQuiz4Score);
+				System.out.println(DisplayController.userTotalScore);
+				DisplayController.setUserTotalScore();
+			}
 	
 	
 }

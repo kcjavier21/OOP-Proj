@@ -46,6 +46,8 @@ public class ChapterTwo implements Initializable {
 	@FXML private Button btnSeePDF;
 	
 	@FXML private Button btnChapOne;
+	@FXML private Button btnChapThree;
+	@FXML private Button btnChapFour;
 	
 	@FXML private Slider progressBar;
 	@FXML private Slider volumeSlider;
@@ -62,7 +64,7 @@ public class ChapterTwo implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		String VUrl = new File("src/media/ChapterOne.mp4").getAbsolutePath();
+		String VUrl = new File("src/media/ChapterTwo.mp4").getAbsolutePath();
 		Media media = new Media(new File(VUrl).toURI().toString());
 		mediaplayer = new MediaPlayer(media);
 		
@@ -95,6 +97,16 @@ public class ChapterTwo implements Initializable {
 				mediaplayer.seek(Duration.seconds(progressBar.getValue()));
 			}
 		});
+		
+		mediaplayer.setOnReady(new Runnable() {
+			@Override
+			public void run() {
+				Duration total = media.getDuration();			
+				progressBar.setMax(total.toSeconds());
+			}
+		});
+		
+		// ==== ADJUST VOLUME =====
 		
 		volumeSlider.setValue(mediaplayer.getVolume() * 100);
 		
@@ -141,7 +153,7 @@ public class ChapterTwo implements Initializable {
 		mediaplayer.pause();
 	    
 		Desktop d = Desktop.getDesktop();
-		d.browse(new URI("https://bit.ly/2MttJDE"));
+		d.browse(new URI("https://drive.google.com/file/d/1pM_2nWKUFBjwU-Lwh3Jocs8rgClMBNDC/view?usp=sharing"));
 	}
 	
 	public void logOut() throws Exception {
@@ -178,8 +190,6 @@ public class ChapterTwo implements Initializable {
 	
 	
 	
-	
-	
 	public void navigateToDashboard() throws Exception {
 		mediaplayer.stop();
 		
@@ -200,6 +210,37 @@ public class ChapterTwo implements Initializable {
 	    	Stage stage = new Stage();
 	    	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
 	    	chapterOneGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void navigateToChapThree() throws Exception {
+		mediaplayer.stop();
+		
+		Stage currentStage = (Stage) btnChapThree.getScene().getWindow();
+	    currentStage.close();
+		
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
+	    	chapterThreeGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void navigateToChapFour() throws Exception {
+		mediaplayer.stop();
+		
+		Stage currentStage = (Stage) btnChapFour.getScene().getWindow();
+	    currentStage.close();
+		
+		try {
+	    	Stage stage = new Stage();
+	    	ChapterFourGUI chapterFourGUI = new ChapterFourGUI();
+	    	chapterFourGUI.start(stage);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
