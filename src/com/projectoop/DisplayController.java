@@ -26,6 +26,9 @@ public class DisplayController implements Initializable {
 	private static int userTotalScore = 0;
 	
 	private static int userQuiz1Attempts = 3;
+	private static int userQuiz2Attempts = 3;
+	//private static int userQuiz3Attempts = 3;
+	//private static int userQuiz4Attempts = 3;
 	
 	private static String usernameeeStr;
 	
@@ -108,6 +111,33 @@ public class DisplayController implements Initializable {
 		System.out.println(DisplayController.userTotalScore);
 		DisplayController.setUserTotalScore();
 	}
+	
+	
+	// ===== USER's QUIZ 2 ATTRIBUTES =======
+		@FXML
+		public static Integer getQuiz2Attempts() {
+		    return DisplayController.userQuiz2Attempts;
+		 }
+		
+		public static void setQuiz2Attempts(Integer attempts) {
+			System.out.println(DisplayController.userQuiz2Attempts);
+			DisplayController.userQuiz2Attempts = attempts;
+			System.out.println(DisplayController.userQuiz2Attempts);
+		}
+		
+		
+		@FXML
+		public static Integer getQuiz2Score() {
+		    return DisplayController.userQuiz2Score;
+		 }
+		
+		public static void setQuiz2Score(Integer score) {
+			System.out.println(DisplayController.userQuiz2Score);
+			DisplayController.userQuiz2Score = score;
+			System.out.println(DisplayController.userQuiz2Score);
+			System.out.println(DisplayController.userTotalScore);
+			DisplayController.setUserTotalScore();
+		}
 	
 	
 }

@@ -67,5 +67,6 @@
             <Font size="10.0" />
          </font>
       </Label>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="108.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="With DataCamp" />
    </children>
 </AnchorPane>

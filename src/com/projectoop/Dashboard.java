@@ -99,5 +99,17 @@ public class Dashboard extends Application {
     		e.printStackTrace();
     	}
 	}
+	
+	public void navigateToChapTwo() throws Exception {
+		Dashboard.window.close();
+		
+	try {
+    	Stage stage = new Stage();
+    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
+    	chapterTwoGUI.start(stage);
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
 }
 

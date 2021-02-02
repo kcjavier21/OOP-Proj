@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onClickRefreshButton" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectoop.ChapterOne">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onClickRefreshButton" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectoop.ChapterTwo">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="96.0" layoutX="10.0" layoutY="10.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1444.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <fill>
@@ -77,13 +77,13 @@
          </padding>
       </HBox>
       <Slider fx:id="progressBar" layoutX="496.0" layoutY="700.0" prefHeight="14.0" prefWidth="765.0" />
-      <Button fx:id="btn_take_quiz" layoutX="1168.0" layoutY="798.0" mnemonicParsing="false" onAction="#navigateToQuizOne" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: transparent;" text="Take Quiz &gt;">
+      <Button fx:id="btn_take_quiz" layoutX="1168.0" layoutY="798.0" mnemonicParsing="false" onAction="#navigateToQuizTwo" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: transparent;" text="Take Quiz &gt;">
          <font>
             <Font size="20.0" />
          </font></Button>
       <VBox layoutX="98.0" layoutY="135.0" prefHeight="352.0" prefWidth="338.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="216.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 1">
+            <Button fx:id="btnChapOne" mnemonicParsing="false" onAction="#navigateToChapOne" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 1">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
@@ -91,7 +91,7 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnChapTwo" mnemonicParsing="false" onAction="#navigateToChapTwo" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 2">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
@@ -142,7 +142,7 @@
             <Font name="Montserrat-Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="671.0" layoutY="157.0" text="CHAPTER 1: Introduction to Data Science">
+      <Label layoutX="671.0" layoutY="157.0" text="CHAPTER 2: Data Collection and Storage">
          <font>
             <Font size="24.0" />
          </font>

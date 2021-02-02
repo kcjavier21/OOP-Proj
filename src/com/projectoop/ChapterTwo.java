@@ -29,7 +29,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
 
-public class ChapterOne implements Initializable {
+public class ChapterTwo implements Initializable {
 
 	@FXML private Label usernameLabel = new Label("Hello");
 	@FXML private Label userProgressLabel = new Label("0");
@@ -45,15 +45,15 @@ public class ChapterOne implements Initializable {
 	@FXML private Button btnLogOut;
 	@FXML private Button btnSeePDF;
 	
-	@FXML private Button btnChapTwo;
+	@FXML private Button btnChapOne;
 	
 	@FXML private Slider progressBar;
 	@FXML private Slider volumeSlider;
 	
 	MediaPlayer mediaplayer;
 	
-	ChapterOneQuizGUI chapterOneQuizGUI = new ChapterOneQuizGUI();
-	ChapterOneQuiz chapterOneQuiz = new ChapterOneQuiz();
+	
+	ChapterTwoQuiz chapterTwoQuiz = new ChapterTwoQuiz();
 	Dashboard dashboard = new Dashboard();
 	
 	private static int userProgress = 0;
@@ -123,15 +123,15 @@ public class ChapterOne implements Initializable {
 
 	public void onClickRefreshButton() {
 		System.out.println("Refresh button clicked!");
-		ChapterOne.username = DisplayController.getUserNameStr();
+		ChapterTwo.username = DisplayController.getUserNameStr();
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		System.out.println("UN Button: " + this.usernameLabel);
 		
-		ChapterOne.userProgress = DisplayController.getUserProgress();
-		this.userProgressLabel.setText(Integer.toString(ChapterOne.userProgress));
+		ChapterTwo.userProgress = DisplayController.getUserProgress();
+		this.userProgressLabel.setText(Integer.toString(ChapterTwo.userProgress));
 		
-		ChapterOne.userTotalScore = DisplayController.getUserTotalScore();
-		this.userTotalScoreLabel.setText(Integer.toString(ChapterOne.userTotalScore));
+		ChapterTwo.userTotalScore = DisplayController.getUserTotalScore();
+		this.userTotalScoreLabel.setText(Integer.toString(ChapterTwo.userTotalScore));
 		
 	}
 	
@@ -161,7 +161,7 @@ public class ChapterOne implements Initializable {
 
 
 	@FXML 
-	private void navigateToQuizOne() throws Exception {
+	private void navigateToQuizTwo() throws Exception {
 		mediaplayer.stop();
 		
 	    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
@@ -169,11 +169,15 @@ public class ChapterOne implements Initializable {
 		
 		try {
 	    	Stage stage = new Stage();
-	    	chapterOneQuizGUI.start(stage);
+	    	ChapterTwoQuizGUI chapterTwoQuizGUI = new ChapterTwoQuizGUI();
+	    	chapterTwoQuizGUI.start(stage);
     	} catch (IOException e) {
     		e.printStackTrace();
     	}
 	}
+	
+	
+	
 	
 	
 	public void navigateToDashboard() throws Exception {
@@ -183,21 +187,19 @@ public class ChapterOne implements Initializable {
 	    currentStage.close();
 	    Stage window = new Stage();
 	    dashboard.start(window);
-		dashboard.switchScene(ChapterOne.username);
+		dashboard.switchScene(ChapterTwo.username);
 	}
 	
-	
-	
-	public void navigateToChapTwo() throws Exception {
+	public void navigateToChapOne() throws Exception {
 		mediaplayer.stop();
 		
-	    Stage currentStage = (Stage) btnChapTwo.getScene().getWindow();
+		Stage currentStage = (Stage) btnChapOne.getScene().getWindow();
 	    currentStage.close();
-	    
+		
 		try {
 	    	Stage stage = new Stage();
-	    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
-	    	chapterTwoGUI.start(stage);
+	    	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
+	    	chapterOneGUI.start(stage);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
