@@ -2,6 +2,8 @@ package com.projectoop;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -10,6 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
@@ -20,6 +24,7 @@ public class Dashboard extends Application {
 	@FXML private Label userTotalScoreLabel = new Label("0");
 	
 	@FXML private Button btnLogOut;
+	@FXML private ImageView imageview;
 	
 	private static int userProgress = 0;
 	private static int userTotalScore = 0;
@@ -36,6 +41,11 @@ public class Dashboard extends Application {
 	public Label getUsernameLabel() {
         return this.usernameLabel;
     }
+	
+	public void initialize(URL url, ResourceBundle rb) {
+		Image image = new Image(getClass().getResourceAsStream("src/media/learn.jpg"));
+		imageview.setImage(image); 
+	}
 	
 	public void start(Stage primaryStage) throws Exception {
 		 this.dashboardLayout = FXMLLoader.load(getClass().getResource("/com/projectoop/fxml-files/dashboard.fxml"));
@@ -59,6 +69,9 @@ public class Dashboard extends Application {
 	
 	
 	public void buttonIsClicked() {
+		//DisplayController displayController = new DisplayController();
+		DisplayController.loadAttributes();
+		
 		System.out.println("Refresh button clicked!");
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
 		System.out.println("UN Button: " + this.usernameLabel);
@@ -68,6 +81,7 @@ public class Dashboard extends Application {
 		
 		Dashboard.userTotalScore = DisplayController.getUserTotalScore();
 		this.userTotalScoreLabel.setText(Integer.toString(Dashboard.userTotalScore));
+		
 	}
 	
 	

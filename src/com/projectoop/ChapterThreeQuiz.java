@@ -31,6 +31,8 @@ public class ChapterThreeQuiz {
 	private static int userProgress = 0;
 	private static int userTotalScore = 0;
 	
+	Stage stage = new Stage();
+	
 	@FXML private Label scoreLabel = new Label("0");
 	@FXML private Label attemptLabel = new Label("3");
 	
@@ -43,10 +45,10 @@ public class ChapterThreeQuiz {
 	// ============ REFRESH =============
 	
 	public void onClickRefreshButton() {
-		System.out.println("Refresh button clicked!");
+		System.out.println("Refresh activated!");
+		DisplayController.loadAttributes();
 		ChapterThreeQuiz.username = DisplayController.getUserNameStr();
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
-		System.out.println("UN Button: " + this.usernameLabel);
 		
 		ChapterThreeQuiz.userProgress = DisplayController.getUserProgress();
 		this.userProgressLabel.setText(Integer.toString(ChapterThreeQuiz.userProgress));
@@ -72,7 +74,6 @@ public class ChapterThreeQuiz {
 	
 	@FXML private void submitAnswers() throws Exception {
 		int tempScore = 0;
-		System.out.println("ATTEMPTS: " + ChapterThreeQuiz.attempts);
 		ChapterThreeQuiz.attempts -= 1;
 		
 		// ===== Identifying number of Attempts =====
@@ -82,54 +83,50 @@ public class ChapterThreeQuiz {
 			this.Submit.setDisable(true);
 		}
 		else {
-				if (answer1.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
+			if (answer1.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
+			
+			if (answer2.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer3.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
 				
-				if (answer2.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer3.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-					
-				if (answer4.getText().toLowerCase().equals("b")) 
-					tempScore = tempScore + 1;
-				
-				if (answer5.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer6.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer7.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-				
-				if (answer8.getText().toLowerCase().equals("b")) 
-					tempScore = tempScore + 1;
-				
-				if (answer9.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer10.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				// ==== Finalizing Progress ======
-				System.out.println("ATTEMPTS: " + ChapterThreeQuiz.attempts);
-				
-				if (ChapterThreeQuiz.attempts == 2) {
-					DisplayController.setProgress(25);
-					ChapterThreeQuiz.userProgress += 25;
-					
-				}
-				
-				if (ChapterThreeQuiz.attempts <= 0) {
-					ChapterThreeQuiz.attempts = 0;
-					
-					this.Submit.setDisable(true);
-				}
-				
-				ChapterThreeQuiz.score = tempScore;
-				DisplayController.setQuiz3Score(tempScore);
-				ChapterThreeQuiz.userTotalScore = DisplayController.getUserTotalScore();
+			if (answer4.getText().toLowerCase().equals("b")) 
+				tempScore = tempScore + 1;
+			
+			if (answer5.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer6.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer7.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
+			
+			if (answer8.getText().toLowerCase().equals("b")) 
+				tempScore = tempScore + 1;
+			
+			if (answer9.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer10.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			// ==== Finalizing Progress ======
+			if (ChapterThreeQuiz.attempts == 2) {
+				DisplayController.setProgress(25);
+				ChapterThreeQuiz.userProgress += 25;
+			}
+			
+			if (ChapterThreeQuiz.attempts <= 0) {
+				ChapterThreeQuiz.attempts = 0;
+				this.Submit.setDisable(true);
+			}
+			
+			ChapterThreeQuiz.score = tempScore;
+			DisplayController.setQuiz3Score(tempScore);
+			ChapterThreeQuiz.userTotalScore = DisplayController.getUserTotalScore();
 			
 		}
 		
@@ -144,7 +141,6 @@ public class ChapterThreeQuiz {
 	}
 	
 	
-	
 	// ========== NAVIGATE ===========
 	
 	public void logOut() throws Exception {
@@ -153,7 +149,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	LoginPageGUI loginPageGUI = new LoginPageGUI();
 	    	loginPageGUI.start(stage);
 		} catch (IOException e) {
@@ -169,7 +164,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	chapterThreeGUI.start(stage);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -182,7 +176,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
 	    	chapterOneGUI.start(stage);
 		} catch (IOException e) {
@@ -196,7 +189,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
 	    	chapterTwoGUI.start(stage);
 		} catch (IOException e) {
@@ -210,7 +202,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 	    try {
-	    	Stage stage = new Stage();
 	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
 	    	chapterThreeGUI.start(stage);
 		} catch (IOException e) {
@@ -224,7 +215,6 @@ public class ChapterThreeQuiz {
 	    currentStage.close();
 	    
 	    try {
-	    	Stage stage = new Stage();
 	    	ChapterFourGUI chapterFourGUI = new ChapterFourGUI();
 	    	chapterFourGUI.start(stage);
 		} catch (IOException e) {
@@ -233,13 +223,10 @@ public class ChapterThreeQuiz {
 	}
 	
 	public void navigateToDashboard() throws Exception {
-		
 	    Stage currentStage = (Stage) btnDashboard.getScene().getWindow();
 	    currentStage.close();
 	    Stage window = new Stage();
 	    dashboard.start(window);
 		dashboard.switchScene(ChapterThreeQuiz.username);
-	}
-		
-	
+	}	
 }

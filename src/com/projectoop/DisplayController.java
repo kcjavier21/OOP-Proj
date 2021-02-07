@@ -1,6 +1,9 @@
 package com.projectoop;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -10,7 +13,7 @@ import javafx.scene.control.Label;
 public class DisplayController implements Initializable {
 	
 	@FXML
-	private static Label usernameee = new Label("Hello");
+	private static Label usernameLabel = new Label("Hello");
 	
 	@FXML
 	private static Label userProgressLabel = new Label("0");
@@ -30,7 +33,13 @@ public class DisplayController implements Initializable {
 	private static int userQuiz3Attempts = 3;
 	private static int userQuiz4Attempts = 3;
 	
-	private static String usernameeeStr;
+	private static String username;
+	private static String firstname;
+	private static String lastname;
+	
+	private static DBConnection connectNow = new DBConnection();
+	private static Connection connectDB = connectNow.getConnection();
+	
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
@@ -42,19 +51,42 @@ public class DisplayController implements Initializable {
 		System.out.println("SetVal called");
 		System.out.println("UN: " + username);
 		
-		usernameee.setId("usernameLabel");
-		usernameee.setText(username);
-		usernameeeStr = username;
-		
-		System.out.println("UN Str Set Val: " + usernameeeStr);
-		System.out.println("UN Set Val: " + usernameee);
+		usernameLabel.setId("usernameLabel");
+		usernameLabel.setText(username);
+		DisplayController.username = username;
 	}
 	
 	@FXML
 	public static String getUserNameStr() {
-	    return usernameeeStr;
+	    return username;
 	 }
 	
+	
+	// === LOAD ATTRIBUTES FROM DATABASE ====
+	public static void loadAttributes(){
+		try {
+			ResultSet rs = connectDB.createStatement().executeQuery("SELECT * FROM users WHERE username = '" + DisplayController.username + "'");
+			
+			while(rs.next()){
+				DisplayController.firstname = rs.getString("firstname");
+				DisplayController.lastname = rs.getString("lastname");
+				
+				DisplayController.userQuiz1Attempts = rs.getInt("quiz1attempts");
+				DisplayController.userQuiz2Attempts = rs.getInt("quiz2attempts");
+				DisplayController.userQuiz3Attempts = rs.getInt("quiz3attempts");
+				DisplayController.userQuiz4Attempts = rs.getInt("quiz4attempts");
+				
+				DisplayController.userQuiz1Score = rs.getInt("quiz1score");
+				DisplayController.userQuiz2Score = rs.getInt("quiz2score");
+				DisplayController.userQuiz3Score = rs.getInt("quiz3score");
+				DisplayController.userQuiz4Score = rs.getInt("quiz4score");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+	}
 	
 	
 	// ===== USER's PROGRESS ======
@@ -87,15 +119,22 @@ public class DisplayController implements Initializable {
 	
 	
 	// ===== USER's QUIZ 1 ATTRIBUTES =======
+	
 	@FXML
 	public static Integer getQuiz1Attempts() {
 	    return DisplayController.userQuiz1Attempts;
 	 }
 	
 	public static void setQuiz1Attempts(Integer attempts) {
-		System.out.println(DisplayController.userQuiz1Attempts);
 		DisplayController.userQuiz1Attempts = attempts;
-		System.out.println(DisplayController.userQuiz1Attempts);
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz1attempts = " + attempts + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
 	}
 	
 	
@@ -105,93 +144,135 @@ public class DisplayController implements Initializable {
 	 }
 	
 	public static void setQuiz1Score(Integer score) {
-		System.out.println(DisplayController.userQuiz1Score);
 		DisplayController.userQuiz1Score = score;
-		System.out.println(DisplayController.userQuiz1Score);
-		System.out.println(DisplayController.userTotalScore);
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz1score = " + score + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+		
 		DisplayController.setUserTotalScore();
 	}
 	
 	
 	// ===== USER's QUIZ 2 ATTRIBUTES =======
-		@FXML
-		public static Integer getQuiz2Attempts() {
-		    return DisplayController.userQuiz2Attempts;
-		 }
+	
+	@FXML
+	public static Integer getQuiz2Attempts() {
+	    return DisplayController.userQuiz2Attempts;
+	 }
+	
+	public static void setQuiz2Attempts(Integer attempts) {
+		DisplayController.userQuiz2Attempts = attempts;
 		
-		public static void setQuiz2Attempts(Integer attempts) {
-			System.out.println(DisplayController.userQuiz2Attempts);
-			DisplayController.userQuiz2Attempts = attempts;
-			System.out.println(DisplayController.userQuiz2Attempts);
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz2attempts = " + attempts + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+	}
+	
+	
+	@FXML
+	public static Integer getQuiz2Score() {
+	    return DisplayController.userQuiz2Score;
+	 }
+	
+	public static void setQuiz2Score(Integer score) {
+		DisplayController.userQuiz2Score = score;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz2score = " + score + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
 		}
 		
-		
-		@FXML
-		public static Integer getQuiz2Score() {
-		    return DisplayController.userQuiz2Score;
-		 }
-		
-		public static void setQuiz2Score(Integer score) {
-			System.out.println(DisplayController.userQuiz2Score);
-			DisplayController.userQuiz2Score = score;
-			System.out.println(DisplayController.userQuiz2Score);
-			System.out.println(DisplayController.userTotalScore);
-			DisplayController.setUserTotalScore();
-		}
+		DisplayController.setUserTotalScore();
+	}
 		
 		
 	// ===== USER's QUIZ 3 ATTRIBUTES =======
-			@FXML
-			public static Integer getQuiz3Attempts() {
-			    return DisplayController.userQuiz3Attempts;
-			 }
-			
-			public static void setQuiz3Attempts(Integer attempts) {
-				System.out.println(DisplayController.userQuiz3Attempts);
-				DisplayController.userQuiz3Attempts = attempts;
-				System.out.println(DisplayController.userQuiz3Attempts);
-			}
-			
-			
-			@FXML
-			public static Integer getQuiz3Score() {
-			    return DisplayController.userQuiz3Score;
-			 }
-			
-			public static void setQuiz3Score(Integer score) {
-				System.out.println(DisplayController.userQuiz3Score);
-				DisplayController.userQuiz3Score = score;
-				System.out.println(DisplayController.userQuiz3Score);
-				System.out.println(DisplayController.userTotalScore);
-				DisplayController.setUserTotalScore();
-			}
+	@FXML
+	public static Integer getQuiz3Attempts() {
+	    return DisplayController.userQuiz3Attempts;
+	 }
+	
+	public static void setQuiz3Attempts(Integer attempts) {
+		DisplayController.userQuiz3Attempts = attempts;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz3attempts = " + attempts + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+	}
+	
+	
+	@FXML
+	public static Integer getQuiz3Score() {
+	    return DisplayController.userQuiz3Score;
+	 }
+	
+	public static void setQuiz3Score(Integer score) {
+		DisplayController.userQuiz3Score = score;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz3score = " + score + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+		
+		DisplayController.setUserTotalScore();
+	}
 			
 
-		// ===== USER's QUIZ 3 ATTRIBUTES =======
-			@FXML
-			public static Integer getQuiz4Attempts() {
-			    return DisplayController.userQuiz4Attempts;
-			 }
-			
-			public static void setQuiz4Attempts(Integer attempts) {
-				System.out.println(DisplayController.userQuiz4Attempts);
-				DisplayController.userQuiz4Attempts = attempts;
-				System.out.println(DisplayController.userQuiz4Attempts);
-			}
-			
-			
-			@FXML
-			public static Integer getQuiz4Score() {
-			    return DisplayController.userQuiz4Score;
-			 }
-			
-			public static void setQuiz4Score(Integer score) {
-				System.out.println(DisplayController.userQuiz4Score);
-				DisplayController.userQuiz4Score = score;
-				System.out.println(DisplayController.userQuiz4Score);
-				System.out.println(DisplayController.userTotalScore);
-				DisplayController.setUserTotalScore();
-			}
+	// ===== USER's QUIZ 4 ATTRIBUTES =======
+	@FXML
+	public static Integer getQuiz4Attempts() {
+	    return DisplayController.userQuiz4Attempts;
+	 }
+	
+	public static void setQuiz4Attempts(Integer attempts) {
+		DisplayController.userQuiz4Attempts = attempts;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz1attempts = " + attempts + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+		
+	}
 	
 	
+	@FXML
+	public static Integer getQuiz4Score() {
+	    return DisplayController.userQuiz4Score;
+	 }
+	
+	public static void setQuiz4Score(Integer score) {
+		DisplayController.userQuiz4Score = score;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET quiz4score = " + score + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+		
+		DisplayController.setUserTotalScore();
+	}
 }

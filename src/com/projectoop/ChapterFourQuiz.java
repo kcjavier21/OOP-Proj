@@ -43,6 +43,7 @@ public class ChapterFourQuiz {
 	// ============ REFRESH =============
 	
 	public void onClickRefreshButton() {
+		DisplayController.loadAttributes();
 		System.out.println("Refresh button clicked!");
 		ChapterFourQuiz.username = DisplayController.getUserNameStr();
 		this.usernameLabel.setText(DisplayController.getUserNameStr());

@@ -32,6 +32,8 @@ public class ChapterTwoQuiz {
 	@FXML private Label scoreLabel = new Label("0");
 	@FXML private Label attemptLabel = new Label("3");
 	
+	Stage stage = new Stage();
+	
 	private static String username = new String("Username");
 	
 	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();  // ==> GET the Chapter Two's GUI
@@ -41,10 +43,11 @@ public class ChapterTwoQuiz {
 	// ============ REFRESH =============
 	
 	public void onClickRefreshButton() {
-		System.out.println("Refresh button clicked!");
+		System.out.println("Refresh activated!");
+		DisplayController.loadAttributes();
+		
 		ChapterTwoQuiz.username = DisplayController.getUserNameStr();
 		this.usernameLabel.setText(DisplayController.getUserNameStr());
-		System.out.println("UN Button: " + this.usernameLabel);
 		
 		ChapterTwoQuiz.userProgress = DisplayController.getUserProgress();
 		this.userProgressLabel.setText(Integer.toString(ChapterTwoQuiz.userProgress));
@@ -54,7 +57,6 @@ public class ChapterTwoQuiz {
 		
 		if (ChapterTwoQuiz.attempts <= 0) {
 			ChapterTwoQuiz.attempts = 0;
-			
 			this.Submit.setDisable(true);
 		}
 		
@@ -70,69 +72,58 @@ public class ChapterTwoQuiz {
 	
 	@FXML private void submitAnswers() throws Exception {
 		int tempScore = 0;
-		System.out.println("ATTEMPTS: " + ChapterTwoQuiz.attempts);
 		ChapterTwoQuiz.attempts -= 1;
 		
 		// ===== Identifying number of Attempts =====
 		if (ChapterTwoQuiz.attempts < 0) {
 			ChapterTwoQuiz.attempts = 0;
-			
 			this.Submit.setDisable(true);
 		}
 		else {
-				if (answer1.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-				
-				if (answer2.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-				
-				if (answer3.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-					
-				if (answer4.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-				
-				if (answer5.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer6.getText().toLowerCase().equals("b")) 
-					tempScore = tempScore + 1;
-				
-				if (answer7.getText().toLowerCase().equals("a")) 
-					tempScore = tempScore + 1;
-				
-				if (answer8.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer9.getText().toLowerCase().equals("c")) 
-					tempScore = tempScore + 1;
-				
-				if (answer10.getText().toLowerCase().equals("d")) 
-					tempScore = tempScore + 1;
-				
-				// ==== Finalizing Progress ======
-				System.out.println("ATTEMPTS: " + ChapterTwoQuiz.attempts);
-				
-				if (ChapterTwoQuiz.attempts == 2) {
-					DisplayController.setProgress(25);
-					ChapterTwoQuiz.userProgress += 25;
-					
-				}	
-				
-				if (ChapterTwoQuiz.attempts <= 0) {
-					ChapterTwoQuiz.attempts = 0;
-					
-					this.Submit.setDisable(true);
-				}
-				
-				
-				ChapterTwoQuiz.score = tempScore;
-				
-				DisplayController.setQuiz2Score(tempScore);
+			if (answer1.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
 			
-				ChapterTwoQuiz.userTotalScore = DisplayController.getUserTotalScore();
-	
+			if (answer2.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
 			
+			if (answer3.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+				
+			if (answer4.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
+			
+			if (answer5.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer6.getText().toLowerCase().equals("b")) 
+				tempScore = tempScore + 1;
+			
+			if (answer7.getText().toLowerCase().equals("a")) 
+				tempScore = tempScore + 1;
+			
+			if (answer8.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer9.getText().toLowerCase().equals("c")) 
+				tempScore = tempScore + 1;
+			
+			if (answer10.getText().toLowerCase().equals("d")) 
+				tempScore = tempScore + 1;
+			
+			// ==== Finalizing Progress ======
+			if (ChapterTwoQuiz.attempts == 2) {
+				DisplayController.setProgress(25);
+				ChapterTwoQuiz.userProgress += 25;
+			}	
+			
+			if (ChapterTwoQuiz.attempts <= 0) {
+				ChapterTwoQuiz.attempts = 0;
+				this.Submit.setDisable(true);
+			}
+			
+			ChapterTwoQuiz.score = tempScore;
+			DisplayController.setQuiz2Score(tempScore);	
+			ChapterTwoQuiz.userTotalScore = DisplayController.getUserTotalScore();
 		}
 		
 		// ========= Displaying Important Attributes =====
@@ -150,12 +141,11 @@ public class ChapterTwoQuiz {
 	// ========== NAVIGATE ===========
 	
 	public void logOut() throws Exception {
-		
+
 	    Stage currentStage = (Stage) btnLogOut.getScene().getWindow();
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	LoginPageGUI loginPageGUI = new LoginPageGUI();
 	    	loginPageGUI.start(stage);
 		} catch (IOException e) {
@@ -171,7 +161,6 @@ public class ChapterTwoQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	chapterTwoGUI.start(stage);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -184,7 +173,6 @@ public class ChapterTwoQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	ChapterOneGUI chapterOneGUI = new ChapterOneGUI();
 	    	chapterOneGUI.start(stage);
 		} catch (IOException e) {
@@ -198,7 +186,6 @@ public class ChapterTwoQuiz {
 	    currentStage.close();
 	    
 		try {
-	    	Stage stage = new Stage();
 	    	ChapterTwoGUI chapterTwoGUI = new ChapterTwoGUI();
 	    	chapterTwoGUI.start(stage);
 		} catch (IOException e) {
@@ -209,20 +196,18 @@ public class ChapterTwoQuiz {
 	
 	public void navigateToChapThree() throws Exception {
 			
-			Stage currentStage = (Stage) btnChapThree.getScene().getWindow();
-		    currentStage.close();
-			
-			try {
-		    	Stage stage = new Stage();
-		    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
-		    	chapterThreeGUI.start(stage);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		Stage currentStage = (Stage) btnChapThree.getScene().getWindow();
+	    currentStage.close();
+		
+		try {
+	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
+	    	chapterThreeGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+	}
 	
 
-	
 	public void navigateToDashboard() throws Exception {
 		
 	    Stage currentStage = (Stage) btnDashboard.getScene().getWindow();
@@ -232,5 +217,4 @@ public class ChapterTwoQuiz {
 		dashboard.switchScene(ChapterTwoQuiz.username);
 	}
 		
-	
 }

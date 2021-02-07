@@ -172,8 +172,7 @@ public class ChapterOne implements Initializable {
 		}
 	}
 
-
-		
+	
 	public void navigateToDashboard() throws Exception {
 		mediaplayer.stop();
 		
