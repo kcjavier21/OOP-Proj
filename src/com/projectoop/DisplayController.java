@@ -12,11 +12,8 @@ import javafx.scene.control.Label;
 
 public class DisplayController implements Initializable {
 	
-	@FXML
-	private static Label usernameLabel = new Label("Hello");
-	
-	@FXML
-	private static Label userProgressLabel = new Label("0");
+	@FXML private static Label usernameLabel = new Label("Hello");
+	@FXML private static Label userProgressLabel = new Label("0");
 	
 	
 	private static int userProgress = 0;
@@ -36,6 +33,9 @@ public class DisplayController implements Initializable {
 	private static String username;
 	private static String firstname;
 	private static String lastname;
+	private static String userEmail;
+	private static int userID = 0;
+	
 	
 	private static DBConnection connectNow = new DBConnection();
 	private static Connection connectDB = connectNow.getConnection();
@@ -70,6 +70,8 @@ public class DisplayController implements Initializable {
 			while(rs.next()){
 				DisplayController.firstname = rs.getString("firstname");
 				DisplayController.lastname = rs.getString("lastname");
+				DisplayController.userEmail = rs.getString("email");
+				DisplayController.userID = rs.getInt("id");
 				
 				DisplayController.userQuiz1Attempts = rs.getInt("quiz1attempts");
 				DisplayController.userQuiz2Attempts = rs.getInt("quiz2attempts");

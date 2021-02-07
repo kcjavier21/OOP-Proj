@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectoop.Registration">
+   <children>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="90.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA SCIENCE " AnchorPane.leftAnchor="90.0">
+         <font>
+            <Font name="Montserrat-Regular" size="28.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" height="33.0" layoutX="80.0" layoutY="550.0" stroke="TRANSPARENT" strokeType="INSIDE" width="118.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.4523809523809524">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8901960849761963" green="0.26274511218070984" blue="0.4901960790157318" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.3843137323856354" blue="0.1882352977991104" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <HBox layoutX="1052.0" layoutY="37.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="40.0" />
+      <TextField fx:id="firstnameTextField" layoutX="77.0" layoutY="196.0" prefHeight="25.0" prefWidth="120.0" promptText="First Name" />
+      <TextField fx:id="lastnameTextField" layoutX="208.0" layoutY="196.0" prefHeight="25.0" prefWidth="126.0" promptText="Last Name" />
+      <TextField fx:id="emailTextField" layoutX="79.0" layoutY="258.0" prefHeight="25.0" prefWidth="255.0" promptText="Email" />
+      <TextField fx:id="usernameTextField" layoutX="79.0" layoutY="314.0" prefHeight="25.0" prefWidth="255.0" promptText="Username" />
+      <PasswordField fx:id="setPasswordField" layoutX="78.0" layoutY="372.0" prefHeight="25.0" prefWidth="254.0" promptText="Password" />
+      <PasswordField fx:id="confirmPasswordField" layoutX="77.0" layoutY="435.0" prefHeight="25.0" prefWidth="255.0" promptText="Confirm Password" />
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="86.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOR EVERYONE" AnchorPane.leftAnchor="86.0">
+         <font>
+            <Font name="Montserrat-Regular" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="173.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="174.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="110.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="58.99200439453125">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="158.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="With DataCamp" />
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="105.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="182.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="148.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ab808d00" height="33.0" layoutX="213.0" layoutY="550.0" stroke="#cf1550" strokeType="OUTSIDE" width="118.0" />
+      <Text fill="#0a0a0a" fontSmoothingType="LCD" layoutX="242.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel" textAlignment="CENTER" wrappingWidth="58.99200439453125">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="133.0" layoutY="508.0" textAlignment="CENTER" textFill="#ff0101" />
+      <Label layoutX="139.0" layoutY="508.0" textAlignment="CENTER" textFill="#3cb523" />
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="236.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name">
+         <font>
+            <Font name="Montserrat-Regular" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="registerButton" layoutX="84.0" layoutY="549.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="33.0" prefWidth="112.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="cancelButton" layoutX="216.0" layoutY="549.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="errorLabel" layoutX="134.0" layoutY="505.0" prefHeight="17.0" prefWidth="150.0" textFill="RED" />
+      <Label fx:id="registrationMessageLabel" layoutX="134.0" layoutY="504.0" textFill="#0b8307" />
+   </children>
+</AnchorPane>

@@ -21,7 +21,7 @@
             <Font name="Montserrat-Regular" size="28.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="25.0" arcWidth="25.0" height="33.0" layoutX="94.0" layoutY="396.0" stroke="TRANSPARENT" strokeType="INSIDE" width="118.0">
+      <Rectangle arcHeight="25.0" arcWidth="25.0" height="33.0" layoutX="94.0" layoutY="382.0" stroke="TRANSPARENT" strokeType="INSIDE" width="118.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.4523809523809524">
                <stops>
@@ -56,13 +56,13 @@
             <Font name="Montserrat-Regular" size="12.0" />
          </font>
       </Text>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="135.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="135.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
          <font>
             <Font name="Montserrat-Regular" size="12.0" />
          </font>
       </Text>
       <PasswordField fx:id="passwordField" layoutX="53.0" layoutY="303.0" prefHeight="25.0" prefWidth="197.0" />
-      <Button fx:id="loginBtn" layoutX="96.0" layoutY="400.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: transparent;">
+      <Button fx:id="loginBtn" layoutX="96.0" layoutY="386.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: transparent;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
@@ -72,5 +72,14 @@
          </font>
       </Label>
       <Text fill="#222222" fontSmoothingType="LCD" layoutX="108.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="With DataCamp" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#ab808d00" height="33.0" layoutX="94.0" layoutY="425.0" stroke="#cf1550" strokeType="OUTSIDE" width="118.0" />
+      <Button fx:id="registerBtn" layoutX="97.0" layoutY="424.0" mnemonicParsing="false" onAction="#register" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: transparent;" text="Register">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

@@ -6,9 +6,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Base64;
 
 import javafx.fxml.FXML;
 
@@ -19,6 +21,7 @@ public class LoginPage {
 	@FXML private PasswordField passwordField;
 	
 	@FXML private Button loginBtn;
+	@FXML private Button registerBtn;
 	
 	@FXML private Label invalidLoginLabel = new Label("");
 	
@@ -35,6 +38,7 @@ public class LoginPage {
 		
 		LoginPage.password = passwordField.getText();
 		System.out.println("Password: " + LoginPage.password);
+		password = encodePassword(password);
 		
 		DBConnection connectNow = new DBConnection();
 		Connection connectDB = connectNow.getConnection();
@@ -69,30 +73,25 @@ public class LoginPage {
 			System.out.println("Exception!");
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
-		if ((LoginPage.username.equals("Ken")) && (LoginPage.password.equals("password"))) {
-			System.out.println("Welcome, " + username);
-			this.invalidLoginLabel.setText(" ");
-			
-			Stage currentStage = (Stage) loginBtn.getScene().getWindow();
-		    currentStage.close();
-			
-			Stage window = new Stage();
-			dashboard.start(window);
-			dashboard.switchScene(LoginPage.username); // -> Will call the...
-				// switchScene method to switch the scene to dash board window.
-		} else {
-			System.out.println("Invalid username or password : " + username);
-			this.invalidLoginLabel.setText("Invalid username or password!");
-		}	*/
+	}
+	
+	private String encodePassword(String password) {
+		return Base64.getEncoder().encodeToString(password.getBytes());
+	}
+	/*
+	private String decodePassword(String password) {
+		return new String (Base64.getMimeDecoder().decode(password));
+	}*/
+	
+	public void register() throws Exception {
+	
+		try {
+	    	Stage stage = new Stage();
+	    	RegistrationGUI registrationGUI = new RegistrationGUI();
+	    	registrationGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 
