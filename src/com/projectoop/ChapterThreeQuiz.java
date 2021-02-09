@@ -155,6 +155,17 @@ public class ChapterThreeQuiz {
 			e.printStackTrace();
 		}
 	}
+	
+	public void seeProfile() throws Exception {
+		
+		try {
+			Stage stage = new Stage();
+			ProfileGUI profileGUI = new ProfileGUI();
+			profileGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 
 	@FXML 

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onClickRefreshButton" prefHeight="670.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projectoop.Profile">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="101.0" stroke="TRANSPARENT" strokeType="INSIDE" width="723.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.41428571428571426">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.4166666567325592" blue="1.0" opacity="0.20000000298023224" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1899999976158142" green="0.9561371803283691" blue="1.0" opacity="0.12999999523162842" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Text fx:id="userFullNameLabel" fill="#222222" fontSmoothingType="LCD" layoutX="127.0" layoutY="172.10400009155273" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRSTNAME LASTNAME" wrappingWidth="543.4719848632812" AnchorPane.leftAnchor="127.0" AnchorPane.topAnchor="145.0">
+         <font>
+            <Font name="Montserrat-Regular" size="28.0" />
+         </font>
+      </Text>
+      <HBox layoutX="1160.0" layoutY="37.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="37.0" />
+      <VBox layoutX="134.0" layoutY="257.0" prefHeight="321.0" prefWidth="206.0">
+         <children>
+            <Text fill="#222222" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Text>
+            <Label prefWidth="116.0" text="Progress:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="148.0" text="Quiz 1 Score:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="151.0" prefHeight="26.0" prefWidth="148.0" text="Quiz 2 Score:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="177.0" prefHeight="26.0" prefWidth="148.0" text="Quiz 3 Score:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="203.0" prefHeight="26.0" prefWidth="148.0" text="Quiz 4 Score:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="148.0" text="Total Score:" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="361.0" layoutY="257.0" prefHeight="321.0" prefWidth="245.0">
+         <children>
+            <Label fx:id="userIDLabel" prefHeight="30.0" prefWidth="253.0" text="ID" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="14.0" prefWidth="149.0">
+               <children>
+                  <Label fx:id="userProgressLabel" text="0" textFill="#222222">
+                     <font>
+                        <Font name="Montserrat-Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" text="\%" textFill="#222222">
+                     <font>
+                        <Font name="Montserrat-Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="quiz1ScoreLabel" layoutX="10.0" layoutY="106.0" prefHeight="30.0" prefWidth="57.0" text="0" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="quiz2ScoreLabel" layoutX="10.0" layoutY="156.0" prefHeight="30.0" prefWidth="57.0" text="0" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="quiz3ScoreLabel" layoutX="10.0" layoutY="186.0" prefHeight="30.0" prefWidth="57.0" text="0" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="quiz4ScoreLabel" layoutX="10.0" layoutY="196.0" prefHeight="30.0" prefWidth="57.0" text="0" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="userTotalScoreLabel" prefHeight="30.0" prefWidth="57.0" text="0" textFill="#222222">
+               <font>
+                  <Font name="Montserrat-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="usernameLabel" layoutX="130.0" layoutY="182.0" prefHeight="30.0" prefWidth="278.0" text="Username" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Montserrat-Regular" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitBtn" layoutX="287.0" layoutY="583.0" mnemonicParsing="false" onAction="#exit" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: transparent;" text="E X I T" textFill="#eb2424" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -156,6 +156,17 @@ public class ChapterThree implements Initializable {
 		d.browse(new URI("https://drive.google.com/file/d/1k5ciNLzqc26cmRax40FHGp5dguS02veQ/view"));
 	}
 	
+	public void seeProfile() throws Exception {
+		
+		try {
+			Stage stage = new Stage();
+			ProfileGUI profileGUI = new ProfileGUI();
+			profileGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void logOut() throws Exception {
 		mediaplayer.stop();
 		

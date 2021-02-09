@@ -73,6 +73,8 @@ public class DisplayController implements Initializable {
 				DisplayController.userEmail = rs.getString("email");
 				DisplayController.userID = rs.getInt("id");
 				
+				DisplayController.userProgress = rs.getInt("progress");
+				
 				DisplayController.userQuiz1Attempts = rs.getInt("quiz1attempts");
 				DisplayController.userQuiz2Attempts = rs.getInt("quiz2attempts");
 				DisplayController.userQuiz3Attempts = rs.getInt("quiz3attempts");
@@ -82,6 +84,8 @@ public class DisplayController implements Initializable {
 				DisplayController.userQuiz2Score = rs.getInt("quiz2score");
 				DisplayController.userQuiz3Score = rs.getInt("quiz3score");
 				DisplayController.userQuiz4Score = rs.getInt("quiz4score");
+				
+				DisplayController.setUserTotalScore();
 			}
 			
 		} catch (Exception e) {
@@ -91,10 +95,32 @@ public class DisplayController implements Initializable {
 	}
 	
 	
+	// ===== USER's BASIC INFO ======
+	@FXML
+	public static String getUserFullName() {
+		String fullname = DisplayController.firstname + " " + DisplayController.lastname;
+	    return fullname;
+	 }
+	
+	@FXML
+	public static Integer getUserID() {
+	    return DisplayController.userID;
+	 }
+	
 	// ===== USER's PROGRESS ======
 	
 	public static void setProgress(Integer progress) {
 		DisplayController.userProgress += progress;
+		
+		try {
+			Statement statement = connectDB.createStatement();
+			statement.executeUpdate("UPDATE users SET progress = " + DisplayController.userProgress + " WHERE username = '" + username + "'");
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getCause();
+		}
+		
+		
 		userProgressLabel.setText(Integer.toString(progress));
 	}
 	
@@ -250,7 +276,7 @@ public class DisplayController implements Initializable {
 		
 		try {
 			Statement statement = connectDB.createStatement();
-			statement.executeUpdate("UPDATE users SET quiz1attempts = " + attempts + " WHERE username = '" + username + "'");
+			statement.executeUpdate("UPDATE users SET quiz4attempts = " + attempts + " WHERE username = '" + username + "'");
 		} catch (Exception e) {
 			e.printStackTrace();
 			e.getCause();

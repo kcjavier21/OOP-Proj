@@ -22,6 +22,7 @@ public class ChapterTwoQuiz {
 	@FXML private Button btnChapOne;
 	@FXML private Button btnChapTwo;
 	@FXML private Button btnChapThree;
+	@FXML private Button btnChapFour;
 	@FXML private Button btnDashboard;
 	
 	private static int attempts = 3;
@@ -167,6 +168,17 @@ public class ChapterTwoQuiz {
 		}
 	}
 	
+	public void seeProfile() throws Exception {
+			
+		try {
+			Stage stage = new Stage();
+			ProfileGUI profileGUI = new ProfileGUI();
+			profileGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void navigateToChapOne() throws Exception {
 		
 	    Stage currentStage = (Stage) btnChapOne.getScene().getWindow();
@@ -202,6 +214,21 @@ public class ChapterTwoQuiz {
 		try {
 	    	ChapterThreeGUI chapterThreeGUI = new ChapterThreeGUI();
 	    	chapterThreeGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void navigateToChapFour() throws Exception {
+		
+	    Stage currentStage = (Stage) btnChapFour.getScene().getWindow();
+	    currentStage.close();
+	    
+	    try {
+	    	Stage stage = new Stage();
+	    	ChapterFourGUI chapterFourGUI = new ChapterFourGUI();
+	    	chapterFourGUI.start(stage);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

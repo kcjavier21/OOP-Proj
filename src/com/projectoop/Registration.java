@@ -2,7 +2,6 @@ package com.projectoop;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -94,15 +93,15 @@ public class Registration {
 						System.out.println("Exception!");
 					}
 				
-				} else {
+				} else 
 					errorLabel.setText("Passwords do not match!");
-				}
-			} else {
+				
+			} else 
 				errorLabel.setText("Password is too short");
-			}
-		} else {
+			
+		} else 
 			errorLabel.setText("Any field cannot be blank!");
-		}
+		
 	}
 	
 	public void cancelButtonOnAction(ActionEvent event) {

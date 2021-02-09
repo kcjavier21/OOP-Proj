@@ -339,7 +339,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
+            <Button fx:id="btnChapFour" mnemonicParsing="false" onAction="#navigateToChapFour" prefHeight="70.0" prefWidth="335.0" style="-fx-background-color: F6F6F6; -fx-background-radius: 15px;" text="Chapter 4">
                <font>
                   <Font name="Montserrat-Regular" size="19.0" />
                </font>
@@ -399,7 +399,7 @@
       </Label>
       <HBox layoutX="1160.0" layoutY="37.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="37.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onClickRefreshButton" style="-fx-background-color: transparent;" text="Refresh Page">
+            <Button mnemonicParsing="false" onAction="#seeProfile" style="-fx-background-color: transparent;" text="See Profile">
                <font>
                   <Font size="14.0" />
                </font>

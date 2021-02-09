@@ -116,7 +116,7 @@
          </font>
       </Label>
       <Circle fill="#f1525a" layoutX="82.0" layoutY="52.0" radius="27.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Label fx:id="userTotalScoreLabel" layoutX="229.0" layoutY="702.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="242.0" AnchorPane.topAnchor="703.0">
+      <Label fx:id="userTotalScoreLabel" layoutX="229.0" layoutY="702.0" prefHeight="30.0" prefWidth="87.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="242.0" AnchorPane.topAnchor="703.0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -137,7 +137,7 @@
       </HBox>
       <HBox layoutX="1052.0" layoutY="37.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="40.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#buttonIsClicked" style="-fx-background-color: transparent;" text="Refresh Page" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#seeProfile" style="-fx-background-color: transparent;" text="See Profile" textAlignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

@@ -179,7 +179,7 @@
          </font>
       </Label>
       <Circle fill="#f1525a" layoutX="178.0" layoutY="118.0" radius="27.0" stroke="TRANSPARENT" strokeType="INSIDE" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="25.0" />
-      <Label fx:id="userTotalScoreLabel" layoutX="242.0" layoutY="703.0" prefHeight="26.0" prefWidth="14.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="242.0" AnchorPane.topAnchor="703.0">
+      <Label fx:id="userTotalScoreLabel" layoutX="242.0" layoutY="703.0" prefHeight="26.0" prefWidth="91.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="242.0" AnchorPane.topAnchor="703.0">
          <font>
             <Font name="Montserrat-Bold" size="20.0" />
          </font>
@@ -200,7 +200,7 @@
       </HBox>
       <HBox layoutX="1158.0" layoutY="132.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="40.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onClickRefreshButton" style="-fx-background-color: transparent;" text="Refresh Page">
+            <Button mnemonicParsing="false" onAction="#seeProfile" style="-fx-background-color: transparent;" text="See Profile">
                <font>
                   <Font size="14.0" />
                </font>

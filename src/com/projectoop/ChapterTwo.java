@@ -156,6 +156,17 @@ public class ChapterTwo implements Initializable {
 		d.browse(new URI("https://drive.google.com/file/d/1pM_2nWKUFBjwU-Lwh3Jocs8rgClMBNDC/view?usp=sharing"));
 	}
 	
+	public void seeProfile() throws Exception {
+		
+		try {
+			Stage stage = new Stage();
+			ProfileGUI profileGUI = new ProfileGUI();
+			profileGUI.start(stage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void logOut() throws Exception {
 		mediaplayer.stop();
 		
