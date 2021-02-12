@@ -42,7 +42,8 @@ public class Registration {
 		
 		Date date = new Date();
 		long now = date.getTime();
-		int id = (int) now / 1000;
+		System.out.println(now);
+		int id = (int) (now / 10000);
 		System.out.println(id);
 		String firstname = firstnameTextField.getText();
 		String lastname = lastnameTextField.getText();
