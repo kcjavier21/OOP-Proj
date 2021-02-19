@@ -3,6 +3,8 @@ package com.projectoop;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,6 +16,18 @@ public class ChapterOneQuiz {
 	@FXML private Label userProgressLabel = new Label("0");
 	@FXML private Label userTotalScoreLabel = new Label("0");
 	
+	@FXML private Label checkLabelOne = new Label("O");
+	@FXML private Label checkLabelTwo = new Label("O");
+	@FXML private Label checkLabelThree = new Label("O");
+	@FXML private Label checkLabelFour = new Label("O");
+	@FXML private Label checkLabelFive = new Label("O");
+	@FXML private Label checkLabelSix = new Label("O");
+	@FXML private Label checkLabelSeven = new Label("O");
+	@FXML private Label checkLabelEight = new Label("O");
+	@FXML private Label checkLabelNine = new Label("O");
+	@FXML private Label checkLabelTen = new Label("O");
+	
+	
 	@FXML private TextField answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10;
 	
 	@FXML private Button Submit;
@@ -24,6 +38,9 @@ public class ChapterOneQuiz {
 	@FXML private Button btnChapThree;
 	@FXML private Button btnChapFour;
 	@FXML private Button btnDashboard;
+	
+	
+	Alert a = new Alert(AlertType.NONE); 
 	
 	private static int attempts = 3;
 	private static int score = 3;
@@ -67,6 +84,18 @@ public class ChapterOneQuiz {
 		
 		ChapterOneQuiz.score = DisplayController.getQuiz1Score();
 		this.scoreLabel.setText(Integer.toString(ChapterOneQuiz.score));
+		
+		if (ChapterOneQuiz.score >= 6) {
+			this.scoreLabel.setStyle("-fx-text-fill: green");
+		} else {
+			this.scoreLabel.setStyle("-fx-text-fill: red");
+		}
+		
+		if (ChapterOneQuiz.attempts > 0) {
+			this.attemptLabel.setStyle("-fx-text-fill: green");
+		} else {
+			this.attemptLabel.setStyle("-fx-text-fill: red");
+		}
 	}
 	
 	
@@ -80,56 +109,136 @@ public class ChapterOneQuiz {
 		// ===== Identifying number of Attempts =====
 		if (ChapterOneQuiz.attempts < 0) {
 			ChapterOneQuiz.attempts = 0;
-			
 			this.Submit.setDisable(true);
 		}
+		
 		else {
-			if (answer1.getText().toLowerCase().equals("b")) 
+			if (answer1.getText().toLowerCase().equals("b")) {
 				tempScore = tempScore + 1;
+				this.checkLabelOne.setText("O");
+				this.checkLabelOne.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelOne.setText("X");
+				this.checkLabelOne.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer2.getText().toLowerCase().equals("a")) 
+			if (answer2.getText().toLowerCase().equals("a")) {
 				tempScore = tempScore + 1;
+				this.checkLabelTwo.setText("O");
+				this.checkLabelTwo.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelTwo.setText("X");
+				this.checkLabelTwo.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer3.getText().toLowerCase().equals("d")) 
+			if (answer3.getText().toLowerCase().equals("d")) {
 				tempScore = tempScore + 1;
+				this.checkLabelThree.setText("O");
+				this.checkLabelThree.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelThree.setText("X");
+				this.checkLabelThree.setStyle("-fx-text-fill: red");
+			}
 				
-			if (answer4.getText().toLowerCase().equals("c")) 
+			if (answer4.getText().toLowerCase().equals("c")) {
 				tempScore = tempScore + 1;
+				this.checkLabelFour.setText("O");
+				this.checkLabelFour.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelFour.setText("X");
+				this.checkLabelFour.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer5.getText().toLowerCase().equals("c")) 
+			if (answer5.getText().toLowerCase().equals("c")) {
 				tempScore = tempScore + 1;
+				this.checkLabelFive.setText("O");
+				this.checkLabelFive.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelFive.setText("X");
+				this.checkLabelFive.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer6.getText().toLowerCase().equals("d")) 
+			if (answer6.getText().toLowerCase().equals("d")) {
 				tempScore = tempScore + 1;
+				this.checkLabelSix.setText("O");
+				this.checkLabelSix.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelSix.setText("X");
+				this.checkLabelSix.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer7.getText().toLowerCase().equals("a")) 
+			if (answer7.getText().toLowerCase().equals("a")) {
 				tempScore = tempScore + 1;
+				this.checkLabelSeven.setText("O");
+				this.checkLabelSeven.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelSeven.setText("X");
+				this.checkLabelSeven.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer8.getText().toLowerCase().equals("b")) 
+			if (answer8.getText().toLowerCase().equals("b")) {
 				tempScore = tempScore + 1;
+				this.checkLabelEight.setText("O");
+				this.checkLabelEight.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelEight.setText("X");
+				this.checkLabelEight.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer9.getText().toLowerCase().equals("c")) 
+			if (answer9.getText().toLowerCase().equals("c")) {
 				tempScore = tempScore + 1;
+				this.checkLabelNine.setText("O");
+				this.checkLabelNine.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelNine.setText("X");
+				this.checkLabelNine.setStyle("-fx-text-fill: red");
+			}
 			
-			if (answer10.getText().toLowerCase().equals("d")) 
+			if (answer10.getText().toLowerCase().equals("d")) {
 				tempScore = tempScore + 1;
+				this.checkLabelTen.setText("O");
+				this.checkLabelTen.setStyle("-fx-text-fill: green");
+			} else {
+				this.checkLabelTen.setText("X");
+				this.checkLabelTen.setStyle("-fx-text-fill: red");
+			}
 			
 			// ==== Finalizing Progress ======
 			System.out.println("ATTEMPTS: " + ChapterOneQuiz.attempts);
 			
-			if (ChapterOneQuiz.attempts == 2) {
+			if (ChapterOneQuiz.userProgress == 0 && tempScore >= 6) {
 				DisplayController.setProgress(25);
 				ChapterOneQuiz.userProgress += 25;
-			}	
+			} 
+				else if (ChapterOneQuiz.userProgress == 25 && tempScore < 6) {
+					DisplayController.setProgress(-25);
+					ChapterOneQuiz.userProgress -= 25;
+				}
 			
+			
+			// ==== Setting number of Attempts ====
 			if (ChapterOneQuiz.attempts <= 0) {
 				ChapterOneQuiz.attempts = 0;
 				this.Submit.setDisable(true);
+				this.attemptLabel.setStyle("-fx-text-fill: red");
 			}
 			
 			ChapterOneQuiz.score = tempScore;
 			DisplayController.setQuiz1Score(tempScore);
 			ChapterOneQuiz.userTotalScore = DisplayController.getUserTotalScore();
+			
+			// ==== Pass or fail ====
+			if (tempScore >= 6) {
+				a.setAlertType(AlertType.INFORMATION); 
+				a.setContentText("Congrats! You passed!\n Your Score: " + tempScore); 
+				a.show();
+				this.scoreLabel.setStyle("-fx-text-fill: green");
+			} else {
+				a.setAlertType(AlertType.WARNING); 
+				a.setContentText("Sorry, you failed :(\n Your Score: " + tempScore); 
+				a.show();
+				this.scoreLabel.setStyle("-fx-text-fill: red");
+			}
 		}
 		
 		// ========= Displaying Important Attributes =====

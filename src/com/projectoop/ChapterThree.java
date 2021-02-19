@@ -6,11 +6,11 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -185,18 +185,24 @@ public class ChapterThree implements Initializable {
 
 	@FXML 
 	private void navigateToQuizThree() throws Exception {
-		mediaplayer.stop();
 		
-	    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
-	    currentStage.close();
-		
-		try {
-	    	Stage stage = new Stage();
-	    	ChapterThreeQuizGUI chapterThreeQuizGUI = new ChapterThreeQuizGUI();
-	    	chapterThreeQuizGUI.start(stage);
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
+		if(ChapterThree.userProgress < 50) {
+			Alert a = new Alert(AlertType.WARNING); 
+			a.setContentText("Please answer and pass the Quiz Number 2 first."); 
+			a.show();
+		} else {
+			mediaplayer.stop();
+		    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
+		    currentStage.close();
+			
+			try {
+		    	Stage stage = new Stage();
+		    	ChapterThreeQuizGUI chapterThreeQuizGUI = new ChapterThreeQuizGUI();
+		    	chapterThreeQuizGUI.start(stage);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	

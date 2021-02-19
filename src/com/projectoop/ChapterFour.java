@@ -6,11 +6,11 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -185,18 +185,23 @@ public class ChapterFour implements Initializable {
 
 	@FXML 
 	private void navigateToQuizFour() throws Exception {
-		mediaplayer.stop();
-		
-	    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
-	    currentStage.close();
-		
-		try {
-	    	Stage stage = new Stage();
-	    	ChapterFourQuizGUI chapterFourQuizGUI = new ChapterFourQuizGUI();
-	    	chapterFourQuizGUI.start(stage);
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
+		if(ChapterFour.userProgress < 75) {
+			Alert a = new Alert(AlertType.WARNING); 
+			a.setContentText("Please answer and pass the Quiz Number 4 first."); 
+			a.show();
+		} else {
+			mediaplayer.stop();
+		    Stage currentStage = (Stage) btn_take_quiz.getScene().getWindow();
+		    currentStage.close();
+			
+			try {
+		    	Stage stage = new Stage();
+		    	ChapterFourQuizGUI chapterFourQuizGUI = new ChapterFourQuizGUI();
+		    	chapterFourQuizGUI.start(stage);
+	    	} catch (IOException e) {
+	    		e.printStackTrace();
+	    	}
+		}
 	}
 	
 	

@@ -8,9 +8,15 @@ public class DBConnection {
 	
 	public Connection getConnection() {
 		//String databaseName = "oop";
-		String databaseUser = "sql12392003";
-		String databasePassword = "DLSFJSjgud";
-		String url = "jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12392003";
+		
+		//String databaseUser = "sql12392003";
+		//String databasePassword = "DLSFJSjgud";
+		//String url = "jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12392003";
+		
+		
+		String databaseUser = "root";
+		String databasePassword = "";
+		String url = "jdbc:mysql://localhost/oop";
 		
 		System.out.println("Nice!");
 		

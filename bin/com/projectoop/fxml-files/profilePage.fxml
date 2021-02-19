@@ -181,5 +181,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Text layoutX="58.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Troubles? Concerns? Need help? Contact our Tech support and maintenance team at techsupport@dsfe.com!" textAlignment="CENTER" wrappingWidth="617.13671875" />
    </children>
 </AnchorPane>

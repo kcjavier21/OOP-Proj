@@ -61,9 +61,9 @@
             <Font name="Montserrat-Regular" size="40.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="440.0" layoutY="241.0" prefHeight="510.0" prefWidth="954.0">
+      <ScrollPane layoutX="440.0" layoutY="241.0" prefHeight="511.0" prefWidth="954.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1570.0" prefWidth="933.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1354.0" prefWidth="933.0">
                <children>
                   <HBox layoutX="18.0" layoutY="32.0" prefHeight="33.0" prefWidth="907.0">
                      <children>
@@ -79,7 +79,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="105.0" layoutY="85.0" prefHeight="20.0" prefWidth="626.0">
+                  <HBox layoutX="106.0" layoutY="70.0" prefHeight="20.0" prefWidth="626.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="581.0" text="a. Data Experimentation    b. Data Science    c. Data Analysis   d. Data Engineering">
                            <font>
@@ -88,7 +88,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="18.0" layoutY="175.0" prefHeight="25.0" prefWidth="674.0">
+                  <HBox layoutX="18.0" layoutY="164.0" prefHeight="25.0" prefWidth="674.0">
                      <children>
                         <TextField fx:id="answer2" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -102,7 +102,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="101.0" layoutY="229.0" prefHeight="25.0" prefWidth="809.0">
+                  <HBox layoutX="103.0" layoutY="200.0" prefHeight="25.0" prefWidth="809.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="794.0" text="a. Form a question    b. Sort Data    c. Interpret results    d. None of these">
                            <font>
@@ -111,7 +111,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="17.0" layoutY="319.0" prefHeight="25.0" prefWidth="894.0">
+                  <HBox layoutX="18.0" layoutY="302.0" prefHeight="25.0" prefWidth="894.0">
                      <children>
                         <TextField fx:id="answer3" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -125,12 +125,12 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Label layoutX="100.0" layoutY="375.0" prefHeight="25.0" prefWidth="798.0" text="a. Champion/Challenger Testing  b. Champion/Challenger Testing    c. All of these     d. None of these">
+                  <Label layoutX="102.0" layoutY="341.0" prefHeight="25.0" prefWidth="798.0" text="a. Champion/Challenger Testing  b. Champion/Challenger Testing    c. All of these     d. None of these">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <HBox layoutX="22.0" layoutY="458.0" prefHeight="15.0" prefWidth="511.0">
+                  <HBox layoutX="18.0" layoutY="429.0" prefHeight="15.0" prefWidth="511.0">
                      <children>
                         <TextField fx:id="answer4" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -144,7 +144,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="100.0" layoutY="508.0" prefHeight="25.0" prefWidth="698.0">
+                  <HBox layoutX="104.0" layoutY="463.0" prefHeight="25.0" prefWidth="698.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="669.0" text="a. Sample Size    b. Statistical Tests    c. Statistical Significance    d. Dashboard">
                            <font>
@@ -153,7 +153,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="22.0" layoutY="606.0" prefHeight="25.0" prefWidth="622.0">
+                  <HBox layoutX="18.0" layoutY="550.0" prefHeight="25.0" prefWidth="622.0">
                      <children>
                         <TextField fx:id="answer5" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -167,7 +167,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="100.0" layoutY="653.0" prefHeight="25.0" prefWidth="700.0">
+                  <HBox layoutX="103.0" layoutY="583.0" prefHeight="25.0" prefWidth="700.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="669.0" text="a. Illustration   b. Statistical Model    c. Unsorted Data   d. None of these">
                            <font>
@@ -176,7 +176,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="22.0" layoutY="726.0" prefHeight="25.0" prefWidth="775.0">
+                  <HBox layoutX="18.0" layoutY="683.0" prefHeight="25.0" prefWidth="775.0">
                      <children>
                         <TextField fx:id="answer6" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -190,7 +190,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="100.0" layoutY="773.0" prefHeight="25.0" prefWidth="700.0">
+                  <HBox layoutX="103.0" layoutY="719.0" prefHeight="25.0" prefWidth="700.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="692.0" text="a. Heart Rate   b. Stock Prices   c. All of these    d. None of these">
                            <font>
@@ -199,7 +199,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="24.0" layoutY="853.0" prefHeight="25.0" prefWidth="784.0">
+                  <HBox layoutX="18.0" layoutY="805.0" prefHeight="25.0" prefWidth="784.0">
                      <children>
                         <TextField fx:id="answer7" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -213,7 +213,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="103.0" layoutY="899.0" prefHeight="20.0" prefWidth="806.0">
+                  <HBox layoutX="104.0" layoutY="839.0" prefHeight="20.0" prefWidth="806.0">
                      <children>
                         <Label prefHeight="20.0" prefWidth="803.0" text="a. Forecasting Time Series    b. Confidence Intervals     c. Time Series Data    d. None of these">
                            <font>
@@ -222,7 +222,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="25.0" layoutY="964.0" prefHeight="25.0" prefWidth="784.0">
+                  <HBox layoutX="18.0" layoutY="930.0" prefHeight="25.0" prefWidth="784.0">
                      <children>
                         <TextField fx:id="answer8" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -236,7 +236,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="104.0" layoutY="1019.0" prefHeight="25.0" prefWidth="815.0">
+                  <HBox layoutX="104.0" layoutY="967.0" prefHeight="25.0" prefWidth="815.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="813.0" text="a. Supervised    b. Controlled   c. Open   d. TensorFlow    ">
                            <font>
@@ -245,7 +245,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="27.0" layoutY="1100.0" prefHeight="25.0" prefWidth="863.0">
+                  <HBox layoutX="18.0" layoutY="1051.0" prefHeight="25.0" prefWidth="863.0">
                      <children>
                         <TextField fx:id="answer9" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -259,7 +259,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="109.0" layoutY="1142.0" prefHeight="25.0" prefWidth="687.0">
+                  <HBox layoutX="109.0" layoutY="1086.0" prefHeight="25.0" prefWidth="687.0">
                      <children>
                         <Label prefHeight="25.0" prefWidth="722.0" text="a. Make a prediction based on data    b. Data has features and labels   c. None of these">
                            <font>
@@ -268,7 +268,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="27.0" layoutY="1221.0" prefHeight="25.0" prefWidth="893.0">
+                  <HBox layoutX="17.0" layoutY="1157.0" prefHeight="25.0" prefWidth="893.0">
                      <children>
                         <TextField fx:id="answer10" prefHeight="0.0" prefWidth="66.0">
                            <HBox.margin>
@@ -282,7 +282,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox layoutX="114.0" layoutY="1260.0" prefHeight="20.0" prefWidth="497.0">
+                  <HBox layoutX="113.0" layoutY="1193.0" prefHeight="20.0" prefWidth="497.0">
                      <children>
                         <Label prefHeight="20.0" prefWidth="489.0" text="a. Super Codes    b. Sorting    c. Clustering    d. Recursion">
                            <font>
@@ -292,6 +292,56 @@
                      </children>
                   </HBox>
                   <HBox layoutX="35.0" layoutY="1317.0" prefHeight="15.0" prefWidth="511.0" />
+                  <Label fx:id="checkLabelOne" layoutX="41.0" layoutY="64.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelTwo" layoutX="41.0" layoutY="195.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelThree" layoutX="41.0" layoutY="336.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelFour" layoutX="41.0" layoutY="458.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelFive" layoutX="41.0" layoutY="578.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelSix" layoutX="41.0" layoutY="714.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelSeven" layoutX="41.0" layoutY="834.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelEight" layoutX="41.0" layoutY="961.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelNine" layoutX="41.0" layoutY="1081.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkLabelTen" layoutX="41.0" layoutY="1188.0" prefHeight="17.0" prefWidth="20.0" style="-fx-text-fill: green;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </content>
@@ -430,7 +480,7 @@
             <Font name="Montserrat-Regular" size="28.0" />
          </font>
       </Text>
-      <Text fill="#222222" fontSmoothingType="LCD" layoutX="447.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the letter of the corrrect answer. Upper case and lower case letters are both accepted!">
+      <Text fill="#222222" fontSmoothingType="LCD" layoutX="447.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the letter of the corrrect answer. Upper case and lower case letters are both accepted! Passing score is 6 and above.">
          <font>
             <Font name="Montserrat-Regular" size="14.0" />
          </font>
